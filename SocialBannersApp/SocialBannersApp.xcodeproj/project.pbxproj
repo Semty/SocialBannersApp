@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A11091EC879EA00B708F9 /* AppDelegate.swift */; };
+		D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A110B1EC879EA00B708F9 /* ViewController.swift */; };
+		D58A110E1EC879EB00B708F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58A110D1EC879EB00B708F9 /* Assets.xcassets */; };
+		D58A11111EC879EB00B708F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58A110F1EC879EB00B708F9 /* Main.storyboard */; };
+		D58A111C1EC879EB00B708F9 /* SocialBannersAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A111B1EC879EB00B708F9 /* SocialBannersAppTests.swift */; };
+		D58A11271EC879EB00B708F9 /* SocialBannersAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A11261EC879EB00B708F9 /* SocialBannersAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D58A11181EC879EB00B708F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58A10FE1EC879EA00B708F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D58A11051EC879EA00B708F9;
+			remoteInfo = SocialBannersApp;
+		};
+		D58A11231EC879EB00B708F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58A10FE1EC879EA00B708F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D58A11051EC879EA00B708F9;
+			remoteInfo = SocialBannersApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D58A11061EC879EA00B708F9 /* SocialBannersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialBannersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58A11091EC879EA00B708F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D58A110B1EC879EA00B708F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D58A110D1EC879EB00B708F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D58A11101EC879EB00B708F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D58A11121EC879EB00B708F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58A11171EC879EB00B708F9 /* SocialBannersAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialBannersAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58A111B1EC879EB00B708F9 /* SocialBannersAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialBannersAppTests.swift; sourceTree = "<group>"; };
+		D58A111D1EC879EB00B708F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58A11221EC879EB00B708F9 /* SocialBannersAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialBannersAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58A11261EC879EB00B708F9 /* SocialBannersAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialBannersAppUITests.swift; sourceTree = "<group>"; };
+		D58A11281EC879EB00B708F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D58A11031EC879EA00B708F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58A11141EC879EB00B708F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58A111F1EC879EB00B708F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D58A10FD1EC879EA00B708F9 = {
+			isa = PBXGroup;
+			children = (
+				D58A11081EC879EA00B708F9 /* SocialBannersApp */,
+				D58A111A1EC879EB00B708F9 /* SocialBannersAppTests */,
+				D58A11251EC879EB00B708F9 /* SocialBannersAppUITests */,
+				D58A11071EC879EA00B708F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D58A11071EC879EA00B708F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D58A11061EC879EA00B708F9 /* SocialBannersApp.app */,
+				D58A11171EC879EB00B708F9 /* SocialBannersAppTests.xctest */,
+				D58A11221EC879EB00B708F9 /* SocialBannersAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D58A11081EC879EA00B708F9 /* SocialBannersApp */ = {
+			isa = PBXGroup;
+			children = (
+				D58A11091EC879EA00B708F9 /* AppDelegate.swift */,
+				D58A110B1EC879EA00B708F9 /* ViewController.swift */,
+				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
+				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
+				D58A11121EC879EB00B708F9 /* Info.plist */,
+			);
+			path = SocialBannersApp;
+			sourceTree = "<group>";
+		};
+		D58A111A1EC879EB00B708F9 /* SocialBannersAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D58A111B1EC879EB00B708F9 /* SocialBannersAppTests.swift */,
+				D58A111D1EC879EB00B708F9 /* Info.plist */,
+			);
+			path = SocialBannersAppTests;
+			sourceTree = "<group>";
+		};
+		D58A11251EC879EB00B708F9 /* SocialBannersAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D58A11261EC879EB00B708F9 /* SocialBannersAppUITests.swift */,
+				D58A11281EC879EB00B708F9 /* Info.plist */,
+			);
+			path = SocialBannersAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D58A11051EC879EA00B708F9 /* SocialBannersApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D58A112B1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersApp" */;
+			buildPhases = (
+				D58A11021EC879EA00B708F9 /* Sources */,
+				D58A11031EC879EA00B708F9 /* Frameworks */,
+				D58A11041EC879EA00B708F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialBannersApp;
+			productName = SocialBannersApp;
+			productReference = D58A11061EC879EA00B708F9 /* SocialBannersApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D58A11161EC879EB00B708F9 /* SocialBannersAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D58A112E1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppTests" */;
+			buildPhases = (
+				D58A11131EC879EB00B708F9 /* Sources */,
+				D58A11141EC879EB00B708F9 /* Frameworks */,
+				D58A11151EC879EB00B708F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D58A11191EC879EB00B708F9 /* PBXTargetDependency */,
+			);
+			name = SocialBannersAppTests;
+			productName = SocialBannersAppTests;
+			productReference = D58A11171EC879EB00B708F9 /* SocialBannersAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D58A11211EC879EB00B708F9 /* SocialBannersAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D58A11311EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppUITests" */;
+			buildPhases = (
+				D58A111E1EC879EB00B708F9 /* Sources */,
+				D58A111F1EC879EB00B708F9 /* Frameworks */,
+				D58A11201EC879EB00B708F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D58A11241EC879EB00B708F9 /* PBXTargetDependency */,
+			);
+			name = SocialBannersAppUITests;
+			productName = SocialBannersAppUITests;
+			productReference = D58A11221EC879EB00B708F9 /* SocialBannersAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D58A10FE1EC879EA00B708F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ruslan Timchenko";
+				TargetAttributes = {
+					D58A11051EC879EA00B708F9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					D58A11161EC879EB00B708F9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D58A11051EC879EA00B708F9;
+					};
+					D58A11211EC879EB00B708F9 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D58A11051EC879EA00B708F9;
+					};
+				};
+			};
+			buildConfigurationList = D58A11011EC879EA00B708F9 /* Build configuration list for PBXProject "SocialBannersApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D58A10FD1EC879EA00B708F9;
+			productRefGroup = D58A11071EC879EA00B708F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D58A11051EC879EA00B708F9 /* SocialBannersApp */,
+				D58A11161EC879EB00B708F9 /* SocialBannersAppTests */,
+				D58A11211EC879EB00B708F9 /* SocialBannersAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D58A11041EC879EA00B708F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58A110E1EC879EB00B708F9 /* Assets.xcassets in Resources */,
+				D58A11111EC879EB00B708F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58A11151EC879EB00B708F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58A11201EC879EB00B708F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D58A11021EC879EA00B708F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
+				D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58A11131EC879EB00B708F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58A111C1EC879EB00B708F9 /* SocialBannersAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D58A111E1EC879EB00B708F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58A11271EC879EB00B708F9 /* SocialBannersAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D58A11191EC879EB00B708F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D58A11051EC879EA00B708F9 /* SocialBannersApp */;
+			targetProxy = D58A11181EC879EB00B708F9 /* PBXContainerItemProxy */;
+		};
+		D58A11241EC879EB00B708F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D58A11051EC879EA00B708F9 /* SocialBannersApp */;
+			targetProxy = D58A11231EC879EB00B708F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D58A110F1EC879EB00B708F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D58A11101EC879EB00B708F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D58A11291EC879EB00B708F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D58A112A1EC879EB00B708F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		D58A112C1EC879EB00B708F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialBannersApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rstimchenko.SocialBannersApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D58A112D1EC879EB00B708F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialBannersApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rstimchenko.SocialBannersApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D58A112F1EC879EB00B708F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialBannersAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rstimchenko.SocialBannersAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialBannersApp.app/Contents/MacOS/SocialBannersApp";
+			};
+			name = Debug;
+		};
+		D58A11301EC879EB00B708F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialBannersAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rstimchenko.SocialBannersAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialBannersApp.app/Contents/MacOS/SocialBannersApp";
+			};
+			name = Release;
+		};
+		D58A11321EC879EB00B708F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialBannersAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rstimchenko.SocialBannersAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SocialBannersApp;
+			};
+			name = Debug;
+		};
+		D58A11331EC879EB00B708F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SocialBannersAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rstimchenko.SocialBannersAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SocialBannersApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D58A11011EC879EA00B708F9 /* Build configuration list for PBXProject "SocialBannersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58A11291EC879EB00B708F9 /* Debug */,
+				D58A112A1EC879EB00B708F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D58A112B1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58A112C1EC879EB00B708F9 /* Debug */,
+				D58A112D1EC879EB00B708F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D58A112E1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58A112F1EC879EB00B708F9 /* Debug */,
+				D58A11301EC879EB00B708F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D58A11311EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58A11321EC879EB00B708F9 /* Debug */,
+				D58A11331EC879EB00B708F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D58A10FE1EC879EA00B708F9 /* Project object */;
+}
