@@ -1,0 +1,2 @@
+# SocialBannersApp
+Mac OS version
