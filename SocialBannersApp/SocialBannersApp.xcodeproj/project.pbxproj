@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
+		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
+		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
 		D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A11091EC879EA00B708F9 /* AppDelegate.swift */; };
 		D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A110B1EC879EA00B708F9 /* ViewController.swift */; };
 		D58A110E1EC879EB00B708F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58A110D1EC879EB00B708F9 /* Assets.xcassets */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
+		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
 		D58A11061EC879EA00B708F9 /* SocialBannersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialBannersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58A11091EC879EA00B708F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D58A110B1EC879EA00B708F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 			children = (
 				D58A11091EC879EA00B708F9 /* AppDelegate.swift */,
 				D58A110B1EC879EA00B708F9 /* ViewController.swift */,
+				D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */,
+				D56E460F1EDAC4AB0062349F /* TitleView.swift */,
+				D56E46111EDB19210062349F /* AddBannerButton.swift */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
 				D58A11121EC879EB00B708F9 /* Info.plist */,
@@ -255,8 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */,
 				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
 				D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */,
+				D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */,
+				D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +510,7 @@
 				D58A112D1EC879EB00B708F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D58A112E1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +519,7 @@
 				D58A11301EC879EB00B708F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D58A11311EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +528,7 @@
 				D58A11331EC879EB00B708F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
