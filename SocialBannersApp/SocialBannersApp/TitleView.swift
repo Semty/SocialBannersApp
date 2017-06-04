@@ -61,6 +61,12 @@ extension NSView {
         
         return gradientLayer
     }
+    
+    func image() -> NSImage {
+        let imageRepresentation = bitmapImageRepForCachingDisplay(in: bounds)!
+        cacheDisplay(in: bounds, to: imageRepresentation)
+        return NSImage(cgImage: imageRepresentation.cgImage!, size: bounds.size)
+    }
 }
 
 

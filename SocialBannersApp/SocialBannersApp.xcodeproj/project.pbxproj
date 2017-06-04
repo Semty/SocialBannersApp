@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4740449833E0781EF0308701 /* Pods_SocialBannersApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC1B6BC00B0E54BB508BCD9 /* Pods_SocialBannersApp.framework */; };
+		70B5C7961CA61617F70F13DA /* Pods_SocialBannersAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490BD1BF5BB395AB1B41C166 /* Pods_SocialBannersAppTests.framework */; };
+		9FFA20544EFD2AA6429D652A /* Pods_SocialBannersAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0606F49FF2ED59EE1CF0141B /* Pods_SocialBannersAppUITests.framework */; };
 		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
 		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
 		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
@@ -16,6 +19,16 @@
 		D58A11111EC879EB00B708F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58A110F1EC879EB00B708F9 /* Main.storyboard */; };
 		D58A111C1EC879EB00B708F9 /* SocialBannersAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A111B1EC879EB00B708F9 /* SocialBannersAppTests.swift */; };
 		D58A11271EC879EB00B708F9 /* SocialBannersAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A11261EC879EB00B708F9 /* SocialBannersAppUITests.swift */; };
+		D5BA653E1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA653D1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift */; };
+		D5BA65451EE1852200AD40A6 /* BackToBannersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */; };
+		D5BA65471EE1887200AD40A6 /* BaseElementsBezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA65461EE1887200AD40A6 /* BaseElementsBezierPaths.swift */; };
+		D5BA65491EE18A2D00AD40A6 /* CrtBnnrMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */; };
+		D5BA654B1EE196B500AD40A6 /* WhiteSquadPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA654A1EE196B500AD40A6 /* WhiteSquadPartView.swift */; };
+		D5BA654D1EE1A2BA00AD40A6 /* WhiteRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA654C1EE1A2BA00AD40A6 /* WhiteRoundedView.swift */; };
+		D5BA654F1EE1A30E00AD40A6 /* RoundedPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA654E1EE1A30E00AD40A6 /* RoundedPartView.swift */; };
+		D5BA65541EE1A62A00AD40A6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA65531EE1A62A00AD40A6 /* GradientView.swift */; };
+		D5BA65561EE2CB1200AD40A6 /* SubstrateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA65551EE2CB1200AD40A6 /* SubstrateHeaderView.swift */; };
+		D5BA65581EE3196600AD40A6 /* NewBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BA65571EE3196600AD40A6 /* NewBannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0606F49FF2ED59EE1CF0141B /* Pods_SocialBannersAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialBannersAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		490BD1BF5BB395AB1B41C166 /* Pods_SocialBannersAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialBannersAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55488D360BE82CC91F0B0B75 /* Pods-SocialBannersAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		680B0A7582662C06613ED06A /* Pods-SocialBannersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp.release.xcconfig"; sourceTree = "<group>"; };
+		8DF99E96813092B92189ABA7 /* Pods-SocialBannersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8E97E1713951AABFDCBD949A /* Pods-SocialBannersAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CC1B6BC00B0E54BB508BCD9 /* Pods_SocialBannersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialBannersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +71,18 @@
 		D58A11221EC879EB00B708F9 /* SocialBannersAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialBannersAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58A11261EC879EB00B708F9 /* SocialBannersAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialBannersAppUITests.swift; sourceTree = "<group>"; };
 		D58A11281EC879EB00B708F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5BA653D1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrtBnnrBgScrollView.swift; sourceTree = "<group>"; };
+		D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackToBannersButton.swift; sourceTree = "<group>"; };
+		D5BA65461EE1887200AD40A6 /* BaseElementsBezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseElementsBezierPaths.swift; sourceTree = "<group>"; };
+		D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrtBnnrMainView.swift; sourceTree = "<group>"; };
+		D5BA654A1EE196B500AD40A6 /* WhiteSquadPartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteSquadPartView.swift; sourceTree = "<group>"; };
+		D5BA654C1EE1A2BA00AD40A6 /* WhiteRoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhiteRoundedView.swift; sourceTree = "<group>"; };
+		D5BA654E1EE1A30E00AD40A6 /* RoundedPartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPartView.swift; sourceTree = "<group>"; };
+		D5BA65531EE1A62A00AD40A6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		D5BA65551EE2CB1200AD40A6 /* SubstrateHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubstrateHeaderView.swift; sourceTree = "<group>"; };
+		D5BA65571EE3196600AD40A6 /* NewBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewBannerView.swift; sourceTree = "<group>"; };
+		E1A8B061E5DC1CAB0B19887E /* Pods-SocialBannersAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E65B9E26F5AE33BDE9ECEB2E /* Pods-SocialBannersAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4740449833E0781EF0308701 /* Pods_SocialBannersApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B5C7961CA61617F70F13DA /* Pods_SocialBannersAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +106,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFA20544EFD2AA6429D652A /* Pods_SocialBannersAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ED5716C3FC30919709E3CDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CC1B6BC00B0E54BB508BCD9 /* Pods_SocialBannersApp.framework */,
+				490BD1BF5BB395AB1B41C166 /* Pods_SocialBannersAppTests.framework */,
+				0606F49FF2ED59EE1CF0141B /* Pods_SocialBannersAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FADDA71981464E2266978DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DF99E96813092B92189ABA7 /* Pods-SocialBannersApp.debug.xcconfig */,
+				680B0A7582662C06613ED06A /* Pods-SocialBannersApp.release.xcconfig */,
+				8E97E1713951AABFDCBD949A /* Pods-SocialBannersAppTests.debug.xcconfig */,
+				E1A8B061E5DC1CAB0B19887E /* Pods-SocialBannersAppTests.release.xcconfig */,
+				E65B9E26F5AE33BDE9ECEB2E /* Pods-SocialBannersAppUITests.debug.xcconfig */,
+				55488D360BE82CC91F0B0B75 /* Pods-SocialBannersAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D58A10FD1EC879EA00B708F9 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +143,8 @@
 				D58A111A1EC879EB00B708F9 /* SocialBannersAppTests */,
 				D58A11251EC879EB00B708F9 /* SocialBannersAppUITests */,
 				D58A11071EC879EA00B708F9 /* Products */,
+				9FADDA71981464E2266978DF /* Pods */,
+				4ED5716C3FC30919709E3CDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +164,7 @@
 				D58A11091EC879EA00B708F9 /* AppDelegate.swift */,
 				D58A110B1EC879EA00B708F9 /* ViewController.swift */,
 				D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */,
-				D56E460F1EDAC4AB0062349F /* TitleView.swift */,
-				D56E46111EDB19210062349F /* AddBannerButton.swift */,
+				D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
 				D58A11121EC879EB00B708F9 /* Info.plist */,
@@ -131,6 +190,49 @@
 			path = SocialBannersAppUITests;
 			sourceTree = "<group>";
 		};
+		D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA65511EE1A5C500AD40A6 /* MyBanners */,
+				D5BA65521EE1A5D800AD40A6 /* Create New Banner */,
+				D5BA65461EE1887200AD40A6 /* BaseElementsBezierPaths.swift */,
+			);
+			name = "Custom Controls and Views";
+			sourceTree = "<group>";
+		};
+		D5BA65501EE1A3B500AD40A6 /* White Rounded Squad */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA65551EE2CB1200AD40A6 /* SubstrateHeaderView.swift */,
+				D5BA654E1EE1A30E00AD40A6 /* RoundedPartView.swift */,
+				D5BA654A1EE196B500AD40A6 /* WhiteSquadPartView.swift */,
+				D5BA654C1EE1A2BA00AD40A6 /* WhiteRoundedView.swift */,
+			);
+			name = "White Rounded Squad";
+			sourceTree = "<group>";
+		};
+		D5BA65511EE1A5C500AD40A6 /* MyBanners */ = {
+			isa = PBXGroup;
+			children = (
+				D56E460F1EDAC4AB0062349F /* TitleView.swift */,
+				D56E46111EDB19210062349F /* AddBannerButton.swift */,
+			);
+			name = MyBanners;
+			sourceTree = "<group>";
+		};
+		D5BA65521EE1A5D800AD40A6 /* Create New Banner */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA65571EE3196600AD40A6 /* NewBannerView.swift */,
+				D5BA65531EE1A62A00AD40A6 /* GradientView.swift */,
+				D5BA653D1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift */,
+				D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */,
+				D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */,
+				D5BA65501EE1A3B500AD40A6 /* White Rounded Squad */,
+			);
+			name = "Create New Banner";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D58A112B1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersApp" */;
 			buildPhases = (
+				843007AB18487E96E5E6ED9B /* [CP] Check Pods Manifest.lock */,
 				D58A11021EC879EA00B708F9 /* Sources */,
 				D58A11031EC879EA00B708F9 /* Frameworks */,
 				D58A11041EC879EA00B708F9 /* Resources */,
+				24B3E3D03FA67821D21CC1FF /* [CP] Embed Pods Frameworks */,
+				233DD725E85CE40D8BBE1ECA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D58A112E1EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppTests" */;
 			buildPhases = (
+				E4A660BCCB62E45A0897633D /* [CP] Check Pods Manifest.lock */,
 				D58A11131EC879EB00B708F9 /* Sources */,
 				D58A11141EC879EB00B708F9 /* Frameworks */,
 				D58A11151EC879EB00B708F9 /* Resources */,
+				5599C9BF793871DD5C0C36FB /* [CP] Embed Pods Frameworks */,
+				CAC98A1F9EA2A0A1C865896E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D58A11311EC879EB00B708F9 /* Build configuration list for PBXNativeTarget "SocialBannersAppUITests" */;
 			buildPhases = (
+				355F8431F01C5765590F53F2 /* [CP] Check Pods Manifest.lock */,
 				D58A111E1EC879EB00B708F9 /* Sources */,
 				D58A111F1EC879EB00B708F9 /* Frameworks */,
 				D58A11201EC879EB00B708F9 /* Resources */,
+				DB0D3C8EC67EAB97D37F0633 /* [CP] Embed Pods Frameworks */,
+				314E392EBB73E90BED1FA318 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,16 +370,164 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		233DD725E85CE40D8BBE1ECA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24B3E3D03FA67821D21CC1FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		314E392EBB73E90BED1FA318 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		355F8431F01C5765590F53F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5599C9BF793871DD5C0C36FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		843007AB18487E96E5E6ED9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CAC98A1F9EA2A0A1C865896E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB0D3C8EC67EAB97D37F0633 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4A660BCCB62E45A0897633D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D58A11021EC879EA00B708F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BA654B1EE196B500AD40A6 /* WhiteSquadPartView.swift in Sources */,
+				D5BA654D1EE1A2BA00AD40A6 /* WhiteRoundedView.swift in Sources */,
 				D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */,
+				D5BA654F1EE1A30E00AD40A6 /* RoundedPartView.swift in Sources */,
+				D5BA65471EE1887200AD40A6 /* BaseElementsBezierPaths.swift in Sources */,
 				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
+				D5BA653E1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift in Sources */,
+				D5BA65561EE2CB1200AD40A6 /* SubstrateHeaderView.swift in Sources */,
 				D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */,
+				D5BA65451EE1852200AD40A6 /* BackToBannersButton.swift in Sources */,
+				D5BA65581EE3196600AD40A6 /* NewBannerView.swift in Sources */,
 				D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */,
+				D5BA65541EE1A62A00AD40A6 /* GradientView.swift in Sources */,
 				D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */,
+				D5BA65491EE18A2D00AD40A6 /* CrtBnnrMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +668,7 @@
 		};
 		D58A112C1EC879EB00B708F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DF99E96813092B92189ABA7 /* Pods-SocialBannersApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -422,6 +682,7 @@
 		};
 		D58A112D1EC879EB00B708F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 680B0A7582662C06613ED06A /* Pods-SocialBannersApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -435,6 +696,7 @@
 		};
 		D58A112F1EC879EB00B708F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E97E1713951AABFDCBD949A /* Pods-SocialBannersAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,6 +712,7 @@
 		};
 		D58A11301EC879EB00B708F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A8B061E5DC1CAB0B19887E /* Pods-SocialBannersAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -465,6 +728,7 @@
 		};
 		D58A11321EC879EB00B708F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65B9E26F5AE33BDE9ECEB2E /* Pods-SocialBannersAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -479,6 +743,7 @@
 		};
 		D58A11331EC879EB00B708F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55488D360BE82CC91F0B0B75 /* Pods-SocialBannersAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;

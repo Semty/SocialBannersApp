@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B20CDA325F0F5D149BD2AB926351644 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		8277C4D5C15955751DF1A797F24C7A28 /* Pods-SocialBannersAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89EA9E93AADA61BCE66EF872C14755D2 /* Pods-SocialBannersAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8AB7A0FAAAF7360219D63B6DC9471813 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		8EB9C814E2D384BB00322CAC0B6A89B6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		A3F6B1E57338638C73CD9870211D2F64 /* Pods-SocialBannersAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94EB30A01CB62FE9D9300182C6468E26 /* Pods-SocialBannersAppUITests-dummy.m */; };
+		B25A12F149E30E99F25BA6956A929216 /* Pods-SocialBannersAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 899DF062AA329C982BDBBF66D8F6F6B1 /* Pods-SocialBannersAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA63FDB9E95204DA2466E109CCA69C66 /* Pods-SocialBannersApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C54635BB4F3DA9814019CC90DC6BEE1 /* Pods-SocialBannersApp-dummy.m */; };
+		EBD41CB973DB942499027356B2AE5CA1 /* Pods-SocialBannersAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 672693661D0455F36355B6D7E3F637B6 /* Pods-SocialBannersAppTests-dummy.m */; };
+		EBD802925D1F99B8484EC54E434B4C3D /* Pods-SocialBannersApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B82919F76F27ED5A0B767627737CAF4 /* Pods-SocialBannersApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C80EA9847B09227262DB4BD4BDB7E6 /* Pods_SocialBannersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SocialBannersApp.framework; path = "Pods-SocialBannersApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B82919F76F27ED5A0B767627737CAF4 /* Pods-SocialBannersApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SocialBannersApp-umbrella.h"; sourceTree = "<group>"; };
+		0F8F28504BB06E1A7D0B5991EDB2A44E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		136C844FE567BB533300DB1268930CA1 /* Pods_SocialBannersAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SocialBannersAppUITests.framework; path = "Pods-SocialBannersAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15FB6C8C09A3DDAD3927C95118B9792C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1791D731B275EF9B2CE0F7A9311A0856 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B2A1A9F8E1090F823A8C1F26647A554 /* Pods-SocialBannersApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialBannersApp-resources.sh"; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2C9A8F9BFEA45358913080DC65566ACE /* Pods-SocialBannersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialBannersApp.debug.xcconfig"; sourceTree = "<group>"; };
+		421405307EECCC274C40A51AC799F7BB /* Pods-SocialBannersAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocialBannersAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		48D8DF8E7702CD18E90DBF102BD59AF0 /* Pods-SocialBannersApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SocialBannersApp.modulemap"; sourceTree = "<group>"; };
+		55B7C56858BE0B1E3F47828D16B4859C /* Pods-SocialBannersAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SocialBannersAppUITests.modulemap"; sourceTree = "<group>"; };
+		59C43E76580025583024CC2D01C3F587 /* Pods-SocialBannersAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialBannersAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		5AFEFEB85CA6A68CE664BD47F2B27E31 /* Pods-SocialBannersAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocialBannersAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		64FDD03FA40BFF391792379AB1C94E28 /* Pods-SocialBannersAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SocialBannersAppTests.modulemap"; sourceTree = "<group>"; };
+		6687BADD48260C58568885F4208DD006 /* Pods-SocialBannersAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialBannersAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		672693661D0455F36355B6D7E3F637B6 /* Pods-SocialBannersAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SocialBannersAppTests-dummy.m"; sourceTree = "<group>"; };
+		69319D75111F4BFA785536F7842A49D8 /* Pods-SocialBannersAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialBannersAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6C54635BB4F3DA9814019CC90DC6BEE1 /* Pods-SocialBannersApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SocialBannersApp-dummy.m"; sourceTree = "<group>"; };
+		6DC3DD588DEE27BFD83539A4682B6D87 /* Pods-SocialBannersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialBannersApp.release.xcconfig"; sourceTree = "<group>"; };
+		77F8EED7D8F575667A4B23EB633BAA93 /* Pods_SocialBannersAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SocialBannersAppTests.framework; path = "Pods-SocialBannersAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C64E30C525014ACE45A96F9114FD5D7 /* Pods-SocialBannersApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SocialBannersApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8524BE2D2165972AE19408ED6C0F41B8 /* Pods-SocialBannersAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialBannersAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		899DF062AA329C982BDBBF66D8F6F6B1 /* Pods-SocialBannersAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SocialBannersAppTests-umbrella.h"; sourceTree = "<group>"; };
+		89EA9E93AADA61BCE66EF872C14755D2 /* Pods-SocialBannersAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SocialBannersAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		90CE3073599C55F020DA88CE9B99B9A4 /* Pods-SocialBannersAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialBannersAppTests-resources.sh"; sourceTree = "<group>"; };
+		929BA15FF1E3FBAE4C66A60EF1AA97A9 /* Pods-SocialBannersAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialBannersAppUITests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94EB30A01CB62FE9D9300182C6468E26 /* Pods-SocialBannersAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SocialBannersAppUITests-dummy.m"; sourceTree = "<group>"; };
+		9BAAF9E183105D6E368CC03193F32FF7 /* Pods-SocialBannersAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SocialBannersAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BC94B266DACEB38407BD7A66F244EB6A /* Pods-SocialBannersAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialBannersAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CF41B4D793A445CCB23918CE73B96365 /* Pods-SocialBannersApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialBannersApp-frameworks.sh"; sourceTree = "<group>"; };
+		CFFC9A4EA6E1B58682C205671F483197 /* Pods-SocialBannersAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialBannersAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2003BF225A8D5DB7954A7AEB3D73907 /* Pods-SocialBannersApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocialBannersApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		FD3090331A5503248B3148A240422632 /* Pods-SocialBannersAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SocialBannersAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0051431851275506CA2CFBF1F5185D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B20CDA325F0F5D149BD2AB926351644 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4762D8BBD72015027E821B751268B069 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB7A0FAAAF7360219D63B6DC9471813 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99DD41414FE771BC395F8052FB8E9CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EB9C814E2D384BB00322CAC0B6A89B6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B19D16273E81C5CDADC4B287B1D7A2E /* Pods-SocialBannersAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F8F28504BB06E1A7D0B5991EDB2A44E /* Info.plist */,
+				55B7C56858BE0B1E3F47828D16B4859C /* Pods-SocialBannersAppUITests.modulemap */,
+				FD3090331A5503248B3148A240422632 /* Pods-SocialBannersAppUITests-acknowledgements.markdown */,
+				421405307EECCC274C40A51AC799F7BB /* Pods-SocialBannersAppUITests-acknowledgements.plist */,
+				94EB30A01CB62FE9D9300182C6468E26 /* Pods-SocialBannersAppUITests-dummy.m */,
+				8524BE2D2165972AE19408ED6C0F41B8 /* Pods-SocialBannersAppUITests-frameworks.sh */,
+				929BA15FF1E3FBAE4C66A60EF1AA97A9 /* Pods-SocialBannersAppUITests-resources.sh */,
+				89EA9E93AADA61BCE66EF872C14755D2 /* Pods-SocialBannersAppUITests-umbrella.h */,
+				CFFC9A4EA6E1B58682C205671F483197 /* Pods-SocialBannersAppUITests.debug.xcconfig */,
+				69319D75111F4BFA785536F7842A49D8 /* Pods-SocialBannersAppUITests.release.xcconfig */,
+			);
+			name = "Pods-SocialBannersAppUITests";
+			path = "Target Support Files/Pods-SocialBannersAppUITests";
+			sourceTree = "<group>";
+		};
+		6208511F38408C0794EF6577407060C3 /* Pods-SocialBannersAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				15FB6C8C09A3DDAD3927C95118B9792C /* Info.plist */,
+				64FDD03FA40BFF391792379AB1C94E28 /* Pods-SocialBannersAppTests.modulemap */,
+				9BAAF9E183105D6E368CC03193F32FF7 /* Pods-SocialBannersAppTests-acknowledgements.markdown */,
+				5AFEFEB85CA6A68CE664BD47F2B27E31 /* Pods-SocialBannersAppTests-acknowledgements.plist */,
+				672693661D0455F36355B6D7E3F637B6 /* Pods-SocialBannersAppTests-dummy.m */,
+				59C43E76580025583024CC2D01C3F587 /* Pods-SocialBannersAppTests-frameworks.sh */,
+				90CE3073599C55F020DA88CE9B99B9A4 /* Pods-SocialBannersAppTests-resources.sh */,
+				899DF062AA329C982BDBBF66D8F6F6B1 /* Pods-SocialBannersAppTests-umbrella.h */,
+				6687BADD48260C58568885F4208DD006 /* Pods-SocialBannersAppTests.debug.xcconfig */,
+				BC94B266DACEB38407BD7A66F244EB6A /* Pods-SocialBannersAppTests.release.xcconfig */,
+			);
+			name = "Pods-SocialBannersAppTests";
+			path = "Target Support Files/Pods-SocialBannersAppTests";
+			sourceTree = "<group>";
+		};
+		78C1976C30FBF92F9080069F043D8A95 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EDD6FDB4CE0E28B497FD69F1AB3756D8 /* Pods-SocialBannersApp */,
+				6208511F38408C0794EF6577407060C3 /* Pods-SocialBannersAppTests */,
+				4B19D16273E81C5CDADC4B287B1D7A2E /* Pods-SocialBannersAppUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				8107E65E038801048189D4C11E2D53B5 /* Products */,
+				78C1976C30FBF92F9080069F043D8A95 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8107E65E038801048189D4C11E2D53B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01C80EA9847B09227262DB4BD4BDB7E6 /* Pods_SocialBannersApp.framework */,
+				77F8EED7D8F575667A4B23EB633BAA93 /* Pods_SocialBannersAppTests.framework */,
+				136C844FE567BB533300DB1268930CA1 /* Pods_SocialBannersAppUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDD6FDB4CE0E28B497FD69F1AB3756D8 /* Pods-SocialBannersApp */ = {
+			isa = PBXGroup;
+			children = (
+				1791D731B275EF9B2CE0F7A9311A0856 /* Info.plist */,
+				48D8DF8E7702CD18E90DBF102BD59AF0 /* Pods-SocialBannersApp.modulemap */,
+				7C64E30C525014ACE45A96F9114FD5D7 /* Pods-SocialBannersApp-acknowledgements.markdown */,
+				E2003BF225A8D5DB7954A7AEB3D73907 /* Pods-SocialBannersApp-acknowledgements.plist */,
+				6C54635BB4F3DA9814019CC90DC6BEE1 /* Pods-SocialBannersApp-dummy.m */,
+				CF41B4D793A445CCB23918CE73B96365 /* Pods-SocialBannersApp-frameworks.sh */,
+				1B2A1A9F8E1090F823A8C1F26647A554 /* Pods-SocialBannersApp-resources.sh */,
+				0B82919F76F27ED5A0B767627737CAF4 /* Pods-SocialBannersApp-umbrella.h */,
+				2C9A8F9BFEA45358913080DC65566ACE /* Pods-SocialBannersApp.debug.xcconfig */,
+				6DC3DD588DEE27BFD83539A4682B6D87 /* Pods-SocialBannersApp.release.xcconfig */,
+			);
+			name = "Pods-SocialBannersApp";
+			path = "Target Support Files/Pods-SocialBannersApp";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2CC922D1BC822C26C530E3129831DB5C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25A12F149E30E99F25BA6956A929216 /* Pods-SocialBannersAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951BCC3042FA904E407E61FDFF24D7DD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8277C4D5C15955751DF1A797F24C7A28 /* Pods-SocialBannersAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B2A338E255FA72413C2118F5B49DCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD802925D1F99B8484EC54E434B4C3D /* Pods-SocialBannersApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6DBB06C898962680A8BDE3D0BC5992F3 /* Pods-SocialBannersAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 266D60C5519D3052216E86CD7668CC32 /* Build configuration list for PBXNativeTarget "Pods-SocialBannersAppTests" */;
+			buildPhases = (
+				ECEEE9CEC016185461C767C1C60C445C /* Sources */,
+				4762D8BBD72015027E821B751268B069 /* Frameworks */,
+				2CC922D1BC822C26C530E3129831DB5C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SocialBannersAppTests";
+			productName = "Pods-SocialBannersAppTests";
+			productReference = 77F8EED7D8F575667A4B23EB633BAA93 /* Pods_SocialBannersAppTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A185D0CCF6A32FD020E1C02B1E896639 /* Pods-SocialBannersApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C88E9448DD111598DEC446D53C1224CC /* Build configuration list for PBXNativeTarget "Pods-SocialBannersApp" */;
+			buildPhases = (
+				267F05CAEC8EF50F20F1F03E15CB09D0 /* Sources */,
+				99DD41414FE771BC395F8052FB8E9CFF /* Frameworks */,
+				D8B2A338E255FA72413C2118F5B49DCC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SocialBannersApp";
+			productName = "Pods-SocialBannersApp";
+			productReference = 01C80EA9847B09227262DB4BD4BDB7E6 /* Pods_SocialBannersApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA962B3D31BF281D810AE15D528E81FD /* Pods-SocialBannersAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 798FE88A8E89BE759D6C8CB27D7459C0 /* Build configuration list for PBXNativeTarget "Pods-SocialBannersAppUITests" */;
+			buildPhases = (
+				E98FAE4AAD3C400D273B8FCC979558E2 /* Sources */,
+				0051431851275506CA2CFBF1F5185D68 /* Frameworks */,
+				951BCC3042FA904E407E61FDFF24D7DD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SocialBannersAppUITests";
+			productName = "Pods-SocialBannersAppUITests";
+			productReference = 136C844FE567BB533300DB1268930CA1 /* Pods_SocialBannersAppUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 8107E65E038801048189D4C11E2D53B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A185D0CCF6A32FD020E1C02B1E896639 /* Pods-SocialBannersApp */,
+				6DBB06C898962680A8BDE3D0BC5992F3 /* Pods-SocialBannersAppTests */,
+				AA962B3D31BF281D810AE15D528E81FD /* Pods-SocialBannersAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		267F05CAEC8EF50F20F1F03E15CB09D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA63FDB9E95204DA2466E109CCA69C66 /* Pods-SocialBannersApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E98FAE4AAD3C400D273B8FCC979558E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F6B1E57338638C73CD9870211D2F64 /* Pods-SocialBannersAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECEEE9CEC016185461C767C1C60C445C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD41CB973DB942499027356B2AE5CA1 /* Pods-SocialBannersAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0F08FFCB334799547024FF4E76053CC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC3DD588DEE27BFD83539A4682B6D87 /* Pods-SocialBannersApp.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SocialBannersApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SocialBannersApp;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		14C516517E155EC013BDBF3415CD9CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6687BADD48260C58568885F4208DD006 /* Pods-SocialBannersAppTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SocialBannersAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SocialBannersAppTests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2C84BD0E892FEB41A17CFDB62E1445A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9A8F9BFEA45358913080DC65566ACE /* Pods-SocialBannersApp.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SocialBannersApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SocialBannersApp;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		34342BBF37D3A9ED85FF2EB654934920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5E86B59DE90D3A2941174E956A765FA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC94B266DACEB38407BD7A66F244EB6A /* Pods-SocialBannersAppTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SocialBannersAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SocialBannersAppTests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		686093123F48D00EA8579D67C17ACE7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69319D75111F4BFA785536F7842A49D8 /* Pods-SocialBannersAppUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SocialBannersAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SocialBannersAppUITests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EBCE0D201DCB1B149475CBBD901B5E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFFC9A4EA6E1B58682C205671F483197 /* Pods-SocialBannersAppUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SocialBannersAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SocialBannersAppUITests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		266D60C5519D3052216E86CD7668CC32 /* Build configuration list for PBXNativeTarget "Pods-SocialBannersAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14C516517E155EC013BDBF3415CD9CD2 /* Debug */,
+				5E86B59DE90D3A2941174E956A765FA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34342BBF37D3A9ED85FF2EB654934920 /* Debug */,
+				F6FC88CB717F413199C282718D2DC09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		798FE88A8E89BE759D6C8CB27D7459C0 /* Build configuration list for PBXNativeTarget "Pods-SocialBannersAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBCE0D201DCB1B149475CBBD901B5E89 /* Debug */,
+				686093123F48D00EA8579D67C17ACE7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C88E9448DD111598DEC446D53C1224CC /* Build configuration list for PBXNativeTarget "Pods-SocialBannersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C84BD0E892FEB41A17CFDB62E1445A0 /* Debug */,
+				0F08FFCB334799547024FF4E76053CC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
