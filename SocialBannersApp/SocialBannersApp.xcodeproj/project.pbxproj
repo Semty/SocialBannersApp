@@ -10,6 +10,7 @@
 		4740449833E0781EF0308701 /* Pods_SocialBannersApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC1B6BC00B0E54BB508BCD9 /* Pods_SocialBannersApp.framework */; };
 		70B5C7961CA61617F70F13DA /* Pods_SocialBannersAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490BD1BF5BB395AB1B41C166 /* Pods_SocialBannersAppTests.framework */; };
 		9FFA20544EFD2AA6429D652A /* Pods_SocialBannersAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0606F49FF2ED59EE1CF0141B /* Pods_SocialBannersAppUITests.framework */; };
+		D500651F1EED4AFB00FDEB35 /* IconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500651E1EED4AFB00FDEB35 /* IconLabel.swift */; };
 		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
 		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
 		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
@@ -56,6 +57,7 @@
 		8DF99E96813092B92189ABA7 /* Pods-SocialBannersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersApp/Pods-SocialBannersApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8E97E1713951AABFDCBD949A /* Pods-SocialBannersAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CC1B6BC00B0E54BB508BCD9 /* Pods_SocialBannersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialBannersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D500651E1EED4AFB00FDEB35 /* IconLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				D5BA653D1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift */,
 				D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */,
 				D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */,
+				D500651E1EED4AFB00FDEB35 /* IconLabel.swift */,
 				D5BA65501EE1A3B500AD40A6 /* White Rounded Squad */,
 			);
 			name = "Create New Banner";
@@ -516,6 +519,7 @@
 				D5BA654B1EE196B500AD40A6 /* WhiteSquadPartView.swift in Sources */,
 				D5BA654D1EE1A2BA00AD40A6 /* WhiteRoundedView.swift in Sources */,
 				D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */,
+				D500651F1EED4AFB00FDEB35 /* IconLabel.swift in Sources */,
 				D5BA654F1EE1A30E00AD40A6 /* RoundedPartView.swift in Sources */,
 				D5BA65471EE1887200AD40A6 /* BaseElementsBezierPaths.swift in Sources */,
 				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
