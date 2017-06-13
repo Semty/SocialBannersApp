@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -740,7 +742,7 @@
                                 <rect key="frame" x="0.0" y="462" width="357" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
-                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7W-PT-LVE" customClass="CrtBnnrBgScrollView" customModule="SocialBannersApp" customModuleProvider="target">
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7W-PT-LVE" customClass="CrtBnnrBgScrollView" customModule="SocialBannersApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="357" height="512"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="YZf-BX-ywp">
                                     <rect key="frame" x="0.0" y="0.0" width="357" height="512"/>
@@ -749,6 +751,37 @@
                                         <view translatesAutoresizingMaskIntoConstraints="NO" id="lWg-Hu-hhA" customClass="CrtBnnrMainView" customModule="SocialBannersApp" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="2" width="357" height="949"/>
                                             <subviews>
+                                                <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" horizontalScrollElasticity="allowed" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="BYj-wj-ODC" customClass="ImagesBannerScrollView" customModule="SocialBannersApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="645" width="357" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="ukr-Gm-Je8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="357" height="60"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <collectionView ambiguous="YES" selectable="YES" id="R57-RG-s9O">
+                                                                <rect key="frame" x="0.0" y="0.0" width="357" height="40"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="Pe9-CX-840">
+                                                                    <size key="itemSize" width="40" height="40"/>
+                                                                </collectionViewFlowLayout>
+                                                                <color key="primaryBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="Ukx-uW-xgV" id="RRn-ZN-ZZa"/>
+                                                                    <outlet property="delegate" destination="Ukx-uW-xgV" id="pQ4-LS-IO4"/>
+                                                                </connections>
+                                                            </collectionView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.93968336679999998" green="1" blue="0.39851467829999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </clipView>
+                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ztd-y2-nt2">
+                                                        <rect key="frame" x="-100" y="-100" width="233" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </scroller>
+                                                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="ICG-3t-bfc">
+                                                        <rect key="frame" x="-100" y="-100" width="16" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </scroller>
+                                                </scrollView>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-Up-Kqe">
                                                     <rect key="frame" x="162" y="710" width="34" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -806,16 +839,33 @@
                                                         <constraint firstItem="sgs-92-eIH" firstAttribute="centerX" secondItem="4iH-sJ-dfi" secondAttribute="centerX" id="lUf-Ou-Iuj"/>
                                                     </constraints>
                                                 </customView>
-                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EuU-p8-5iO" customClass="NewBannerView" customModule="SocialBannersApp" customModuleProvider="target">
+                                                <customView translatesAutoresizingMaskIntoConstraints="NO" id="EuU-p8-5iO" customClass="NewBannerView" customModule="SocialBannersApp" customModuleProvider="target">
                                                     <rect key="frame" x="57" y="757" width="244" height="96"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <subviews>
+                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="OgN-E0-LOz">
+                                                            <rect key="frame" x="20" y="32" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="OgN-E0-LOz" secondAttribute="height" multiplier="1:1" id="aGF-ng-efH"/>
+                                                            </constraints>
+                                                        </customView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="OgN-E0-LOz" firstAttribute="height" secondItem="EuU-p8-5iO" secondAttribute="height" multiplier="0.333333" id="Psl-Xr-oCE"/>
+                                                        <constraint firstItem="OgN-E0-LOz" firstAttribute="centerY" secondItem="EuU-p8-5iO" secondAttribute="centerY" id="bv4-bd-Tvv"/>
+                                                        <constraint firstItem="OgN-E0-LOz" firstAttribute="leading" secondItem="EuU-p8-5iO" secondAttribute="leading" constant="20" id="mtO-yJ-l89"/>
+                                                    </constraints>
                                                 </customView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4iH-sJ-dfi" firstAttribute="leading" secondItem="lWg-Hu-hhA" secondAttribute="leading" id="4jt-PN-xhA"/>
+                                                <constraint firstItem="EuU-p8-5iO" firstAttribute="leading" secondItem="lWg-Hu-hhA" secondAttribute="leading" constant="57" id="BrY-nc-IyO"/>
+                                                <constraint firstAttribute="trailing" secondItem="EuU-p8-5iO" secondAttribute="trailing" constant="56" id="Ejs-gf-paQ"/>
+                                                <constraint firstItem="EuU-p8-5iO" firstAttribute="centerX" secondItem="lWg-Hu-hhA" secondAttribute="centerX" id="Nby-M6-VA7"/>
                                                 <constraint firstAttribute="height" constant="949" id="OfX-j8-mN0"/>
                                                 <constraint firstItem="4iH-sJ-dfi" firstAttribute="top" secondItem="lWg-Hu-hhA" secondAttribute="top" constant="20" id="Q4h-Ag-L2e"/>
                                                 <constraint firstAttribute="width" constant="357" id="XeB-ZU-2jP"/>
+                                                <constraint firstItem="EuU-p8-5iO" firstAttribute="top" secondItem="lWg-Hu-hhA" secondAttribute="top" constant="96" id="cZZ-IF-6zH"/>
+                                                <constraint firstAttribute="bottom" secondItem="EuU-p8-5iO" secondAttribute="bottom" constant="757" id="e1z-Sd-Uso"/>
                                                 <constraint firstItem="4iH-sJ-dfi" firstAttribute="centerX" secondItem="lWg-Hu-hhA" secondAttribute="centerX" id="hLp-zr-mee"/>
                                                 <constraint firstAttribute="trailing" secondItem="4iH-sJ-dfi" secondAttribute="trailing" id="kfN-FT-Oq6"/>
                                                 <constraint firstAttribute="bottom" secondItem="4iH-sJ-dfi" secondAttribute="bottom" constant="815" id="pWl-RL-1QW"/>
@@ -861,6 +911,8 @@
                     <connections>
                         <outlet property="backToBannersButton" destination="97U-rm-RQI" id="ugm-wv-zP1"/>
                         <outlet property="createBannerView" destination="lWg-Hu-hhA" id="1ik-3D-0Ol"/>
+                        <outlet property="imageForNewBannerView" destination="OgN-E0-LOz" id="PTo-pX-FPx"/>
+                        <outlet property="imagesCollectionView" destination="R57-RG-s9O" id="UxG-HD-T5T"/>
                         <outlet property="newBannerView" destination="EuU-p8-5iO" id="igm-cc-IXY"/>
                         <outlet property="roundedHeaderView" destination="4iH-sJ-dfi" id="1fD-9M-qkn"/>
                         <outlet property="scrollView" destination="l7W-PT-LVE" id="jx1-Ry-wEN"/>
@@ -870,19 +922,6 @@
                 <customObject id="jNF-6l-tGB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="687.5" y="929"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="uRN-6E-zC2">
-            <objects>
-                <viewController id="Y0y-WA-jZP" sceneMemberID="viewController">
-                    <view key="view" id="n6A-k2-opJ">
-                        <rect key="frame" x="0.0" y="0.0" width="357" height="949"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="dR8-va-dKC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1061.5" y="710.5"/>
         </scene>
     </scenes>
     <resources>

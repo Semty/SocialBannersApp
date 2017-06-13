@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CreateNewBannerViewController: NSViewController {
+class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
 
 // MARK: - IBOutlet's
     
@@ -21,7 +21,9 @@ class CreateNewBannerViewController: NSViewController {
     @IBOutlet weak var roundedHeaderView: WhiteRoundedView!
     
     @IBOutlet weak var backToBannersButton: BackToBannersButton!
+    @IBOutlet weak var imagesCollectionView: NSCollectionView!
     
+    @IBOutlet weak var imageForNewBannerView: NSView!
     
 // MARK: - Private variables
     
@@ -30,8 +32,13 @@ class CreateNewBannerViewController: NSViewController {
     private var substrateStartFrame = CGRect.zero   // default
     private var newBannerStartFrame = CGRect.zero   // default
     
+// MARK: - Public variables
+    
+    let imageBannerModel = ImageBannerModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        newBannerView.translatesAutoresizingMaskIntoConstraints = true
         roundedHeaderView.translatesAutoresizingMaskIntoConstraints = true
         
         headerStartOrigin = roundedHeaderView.frame.origin
@@ -51,6 +58,52 @@ class CreateNewBannerViewController: NSViewController {
                                                selector: #selector(boundsDidChangeNotification(_:)),
                                                name: .NSViewBoundsDidChange,
                                                object: scrollView.contentView)
+        // Configure Collection View
+        configureCollectionView()
+    }
+    
+// MARK: - NSCollectionViewDataSource
+
+    public func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageBannerModel.numberOfItems
+    }
+
+    public func numberOfSections(in collectionView: NSCollectionView) -> Int {
+        return imageBannerModel.numberOfSections
+    }
+    
+    public func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
+        
+        let item = collectionView.makeItem(withIdentifier: "ImageBannerCollectionItem",
+                                           for: indexPath)
+        guard let collectionViewItem = item as? ImageBannerCollectionItem else {
+            return item
+        }
+        
+        collectionViewItem.view.layer?.backgroundColor = CGColor.black
+        
+        let isItemSelected = collectionView.selectionIndexPaths.contains(indexPath)
+        collectionViewItem.setHighlight(isItemSelected)
+        
+        return item
+    }
+
+// MARK: - NSCollectionViewDelegate
+    
+    public func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        for indexPath in indexPaths {
+            guard let item = collectionView.item(at: indexPath) else {continue}
+            (item as! ImageBannerCollectionItem).setHighlight(true)
+// FIXME: - This is the test, need fix
+            imageForNewBannerView.layer?.backgroundColor = item.view.layer?.backgroundColor
+        }
+    }
+    
+    public func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
+        for indexPath in indexPaths {
+            guard let item = collectionView.item(at: indexPath) else {continue}
+            (item as! ImageBannerCollectionItem).setHighlight(false)
+        }
     }
     
 // MARK: - Actions
@@ -111,6 +164,18 @@ class CreateNewBannerViewController: NSViewController {
         
         substrateHeaderView.setFrameOrigin(NSPoint.init(x: substrateStartFrame.origin.x,
                                                         y: substrateStartFrame.origin.y - scrollYOffset))
+    }
+    
+    fileprivate func configureCollectionView() {
+        let flowLayout = NSCollectionViewFlowLayout()
+        flowLayout.itemSize = NSSize(width: 40.0, height: 40.0)
+        flowLayout.sectionInset = EdgeInsets(top: 0.0, left: 10.0, bottom: 20.0, right: 10.0)
+        flowLayout.minimumInteritemSpacing = 10.0
+        flowLayout.minimumLineSpacing = 10.0
+        flowLayout.scrollDirection = .horizontal
+        
+        imagesCollectionView.collectionViewLayout = flowLayout
+        view.wantsLayer = true
     }
     
 }
