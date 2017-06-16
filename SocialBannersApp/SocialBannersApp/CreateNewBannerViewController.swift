@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
+class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate, NSTextFieldDelegate {
 
 // MARK: - IBOutlet's
     
@@ -22,7 +22,11 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
     @IBOutlet weak var backToBannersButton: BackToBannersButton!
     @IBOutlet weak var imagesCollectionView: NSCollectionView!
+    @IBOutlet weak var enterTitleField: NSTextField!
     
+// MARK: - New Banner Elements
+    
+    @IBOutlet weak var titleForNewBanner: NSTextField!
     @IBOutlet weak var imageForNewBannerView: NSView!
     
 // MARK: - Private variables
@@ -117,6 +121,18 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         bannersVC.resizeWindow(withCreateBannerSize: bannersVC.view.bounds)
     }
     
+    override func controlTextDidChange(_ obj: Notification) {
+        
+        let enterTextField = obj.object as! NSTextField
+        
+        if enterTextField == enterTitleField {
+            if enterTitleField.stringValue.characters.count <= 15 {
+                self.titleForNewBanner.stringValue = enterTitleField.stringValue
+            }
+        }
+        
+    }
+    
 // MARK: - Tracking of the scroll position
     
     func boundsDidChangeNotification(_ notification: NSNotification) {
@@ -134,7 +150,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         }
     }
     
-// MARK: - Helpful Functions
+// MARK: - Scrolling Functions
     
     func scrollToDown(withScrollYOffset scrollYOffset: CGFloat) {
         let substrateYOffset: CGFloat = (scrollYOffset <= 0 && scrollYOffset >= -20) ? scrollYOffset : -20
@@ -165,6 +181,8 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         substrateHeaderView.setFrameOrigin(NSPoint.init(x: substrateStartFrame.origin.x,
                                                         y: substrateStartFrame.origin.y - scrollYOffset))
     }
+
+// MARK: - Helpful Functions
     
     fileprivate func configureCollectionView() {
         let flowLayout = NSCollectionViewFlowLayout()

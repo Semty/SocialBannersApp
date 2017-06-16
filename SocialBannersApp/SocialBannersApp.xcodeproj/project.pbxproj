@@ -15,6 +15,8 @@
 		D50065271EEFF92200FDEB35 /* ImageBannerCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065251EEFF92200FDEB35 /* ImageBannerCollectionItem.swift */; };
 		D50065281EEFF92200FDEB35 /* ImageBannerCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D50065261EEFF92200FDEB35 /* ImageBannerCollectionItem.xib */; };
 		D500652B1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500652A1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift */; };
+		D500652D1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */; };
+		D50065321EF1361400FDEB35 /* TypeTitleForNewBannerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065311EF1361400FDEB35 /* TypeTitleForNewBannerField.swift */; };
 		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
 		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
 		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
@@ -66,6 +68,8 @@
 		D50065251EEFF92200FDEB35 /* ImageBannerCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBannerCollectionItem.swift; sourceTree = "<group>"; };
 		D50065261EEFF92200FDEB35 /* ImageBannerCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBannerCollectionItem.xib; sourceTree = "<group>"; };
 		D500652A1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesBannerScrollView.swift; sourceTree = "<group>"; };
+		D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTitleForNewBannerView.swift; sourceTree = "<group>"; };
+		D50065311EF1361400FDEB35 /* TypeTitleForNewBannerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTitleForNewBannerField.swift; sourceTree = "<group>"; };
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				D5BA65571EE3196600AD40A6 /* NewBannerView.swift */,
 				D5BA65531EE1A62A00AD40A6 /* GradientView.swift */,
 				D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */,
+				D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */,
+				D50065311EF1361400FDEB35 /* TypeTitleForNewBannerField.swift */,
 				D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */,
 				D500651E1EED4AFB00FDEB35 /* IconLabel.swift */,
 				D50065291EEFFE5E00FDEB35 /* Scroll directions */,
@@ -545,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D500652D1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift in Sources */,
 				D5BA654B1EE196B500AD40A6 /* WhiteSquadPartView.swift in Sources */,
 				D5BA654D1EE1A2BA00AD40A6 /* WhiteRoundedView.swift in Sources */,
 				D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */,
@@ -556,6 +563,7 @@
 				D500652B1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift in Sources */,
 				D5BA65561EE2CB1200AD40A6 /* SubstrateHeaderView.swift in Sources */,
 				D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */,
+				D50065321EF1361400FDEB35 /* TypeTitleForNewBannerField.swift in Sources */,
 				D50065271EEFF92200FDEB35 /* ImageBannerCollectionItem.swift in Sources */,
 				D5BA65451EE1852200AD40A6 /* BackToBannersButton.swift in Sources */,
 				D5BA65581EE3196600AD40A6 /* NewBannerView.swift in Sources */,

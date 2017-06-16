@@ -19,6 +19,6 @@ class ImageBannerCollectionItem: NSCollectionViewItem {
     }
     
     func setHighlight(_ selected: Bool) {
-        view.layer?.borderWidth = selected ? 2.5 : 0.0
+        view.layer?.borderWidth = selected ? 2.0 : 0.0
     }
 }

@@ -752,7 +752,7 @@
                                             <rect key="frame" x="0.0" y="2" width="357" height="949"/>
                                             <subviews>
                                                 <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" horizontalScrollElasticity="allowed" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="BYj-wj-ODC" customClass="ImagesBannerScrollView" customModule="SocialBannersApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="645" width="357" height="60"/>
+                                                    <rect key="frame" x="0.0" y="640" width="357" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="ukr-Gm-Je8">
                                                         <rect key="frame" x="0.0" y="0.0" width="357" height="60"/>
@@ -791,6 +791,40 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-7C-Vaa">
+                                                    <rect key="frame" x="161" y="600" width="34" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Title" id="7KG-1h-TD9">
+                                                        <font key="font" size="13" name="AvenirNext-DemiBold"/>
+                                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX1-4E-i0G">
+                                                    <rect key="frame" x="110" y="515" width="136" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Up to 15 characters" id="77g-Yy-XSm">
+                                                        <font key="font" size="10" name="AvenirNext-UltraLight"/>
+                                                        <color key="textColor" red="0.61176470588235299" green="0.88627450980392153" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psR-Sw-fVQ">
+                                                    <rect key="frame" x="57" y="547" width="244" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="Enter a Title" id="lno-fJ-6lV">
+                                                        <font key="font" size="12" name="AvenirNext-Regular"/>
+                                                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Ukx-uW-xgV" id="KGm-YE-hvx"/>
+                                                    </connections>
+                                                </textField>
+                                                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LT-G7-8pN" customClass="TypeTitleForNewBannerView" customModule="SocialBannersApp" customModuleProvider="target">
+                                                    <rect key="frame" x="57" y="540" width="244" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </customView>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="4iH-sJ-dfi" customClass="WhiteRoundedView" customModule="SocialBannersApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="815" width="357" height="114"/>
                                                     <subviews>
@@ -848,11 +882,22 @@
                                                                 <constraint firstAttribute="width" secondItem="OgN-E0-LOz" secondAttribute="height" multiplier="1:1" id="aGF-ng-efH"/>
                                                             </constraints>
                                                         </customView>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-d4-5rG">
+                                                            <rect key="frame" x="52" y="36" width="192" height="24"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="O7m-gU-wMl">
+                                                                <font key="font" size="14" name="AvenirNext-Medium"/>
+                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="BjH-d4-5rG" firstAttribute="leading" secondItem="OgN-E0-LOz" secondAttribute="trailing" constant="2" id="02E-Hf-JkJ"/>
                                                         <constraint firstItem="OgN-E0-LOz" firstAttribute="height" secondItem="EuU-p8-5iO" secondAttribute="height" multiplier="0.333333" id="Psl-Xr-oCE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BjH-d4-5rG" secondAttribute="trailing" constant="2" id="bWE-9J-H2y"/>
                                                         <constraint firstItem="OgN-E0-LOz" firstAttribute="centerY" secondItem="EuU-p8-5iO" secondAttribute="centerY" id="bv4-bd-Tvv"/>
                                                         <constraint firstItem="OgN-E0-LOz" firstAttribute="leading" secondItem="EuU-p8-5iO" secondAttribute="leading" constant="20" id="mtO-yJ-l89"/>
+                                                        <constraint firstItem="BjH-d4-5rG" firstAttribute="centerY" secondItem="EuU-p8-5iO" secondAttribute="centerY" id="o4M-t1-NhX"/>
                                                     </constraints>
                                                 </customView>
                                             </subviews>
@@ -911,12 +956,14 @@
                     <connections>
                         <outlet property="backToBannersButton" destination="97U-rm-RQI" id="ugm-wv-zP1"/>
                         <outlet property="createBannerView" destination="lWg-Hu-hhA" id="1ik-3D-0Ol"/>
-                        <outlet property="imageForNewBannerView" destination="OgN-E0-LOz" id="PTo-pX-FPx"/>
+                        <outlet property="enterTitleField" destination="psR-Sw-fVQ" id="xyf-x4-gi4"/>
+                        <outlet property="imageForNewBannerView" destination="OgN-E0-LOz" id="jkB-W0-1Rc"/>
                         <outlet property="imagesCollectionView" destination="R57-RG-s9O" id="UxG-HD-T5T"/>
                         <outlet property="newBannerView" destination="EuU-p8-5iO" id="igm-cc-IXY"/>
                         <outlet property="roundedHeaderView" destination="4iH-sJ-dfi" id="1fD-9M-qkn"/>
                         <outlet property="scrollView" destination="l7W-PT-LVE" id="jx1-Ry-wEN"/>
                         <outlet property="substrateHeaderView" destination="k6w-tu-9Hh" id="JgL-cp-e5z"/>
+                        <outlet property="titleForNewBanner" destination="BjH-d4-5rG" id="t3Q-LU-J5Y"/>
                     </connections>
                 </viewController>
                 <customObject id="jNF-6l-tGB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
