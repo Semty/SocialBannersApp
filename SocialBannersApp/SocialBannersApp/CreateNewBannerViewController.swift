@@ -35,7 +35,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
     @IBOutlet weak var titleForNewBanner: NSTextField!
     @IBOutlet weak var subtitleForNewBanner: NSTextField!
-    @IBOutlet weak var imageForNewBannerView: NSView!
+    @IBOutlet weak var imageForNewBannerView: BackgroundImageView!
     
 // MARK: - Private variables
     
@@ -97,7 +97,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             return item
         }
         
-        collectionViewItem.view.layer?.backgroundColor = CGColor.black
+        (collectionViewItem.view as! BackgroundImageView).setBackgroundImage(withIndex: indexPath.item, andColor: .white)
         
         let isItemSelected = collectionView.selectionIndexPaths.contains(indexPath)
         collectionViewItem.setHighlight(isItemSelected)
@@ -111,8 +111,15 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         for indexPath in indexPaths {
             guard let item = collectionView.item(at: indexPath) else {continue}
             (item as! ImageBannerCollectionItem).setHighlight(true)
-// FIXME: - This is the test, need fix
-            imageForNewBannerView.layer?.backgroundColor = item.view.layer?.backgroundColor
+// FIXME: - Need fix color
+            if indexPath.item != 0 {
+                imageForNewBannerView.setBackgroundImage(withIndex: indexPath.item,
+                                                         andColor: .black)
+            } else {
+                imageForNewBannerView.color = .clear
+            }
+            
+            imageForNewBannerView.layer?.setNeedsDisplay()
         }
     }
     

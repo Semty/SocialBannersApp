@@ -11,6 +11,6 @@ import Cocoa
 class ImageBannerModel: NSObject {
 
     fileprivate(set) var numberOfSections   = 1
-    fileprivate(set) var numberOfItems      = 15 // Default
+    fileprivate(set) var numberOfItems      = 25 // Default
     
 }

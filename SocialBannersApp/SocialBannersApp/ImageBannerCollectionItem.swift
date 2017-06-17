@@ -13,12 +13,13 @@ class ImageBannerCollectionItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.lightGray.cgColor
+        view.layer?.backgroundColor = NSColor.clear.cgColor
         view.layer?.borderWidth = 0.0
+        view.layer?.cornerRadius = 10
         view.layer?.borderColor = NSColor.white.cgColor
     }
     
     func setHighlight(_ selected: Bool) {
-        view.layer?.borderWidth = selected ? 2.0 : 0.0
+        view.layer?.borderWidth = selected ? 1.0 : 0.0
     }
 }

@@ -1004,7 +1004,7 @@
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="EuU-p8-5iO" customClass="NewBannerView" customModule="SocialBannersApp" customModuleProvider="target">
                                                     <rect key="frame" x="57" y="757" width="244" height="96"/>
                                                     <subviews>
-                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="OgN-E0-LOz">
+                                                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="OgN-E0-LOz" customClass="BackgroundImageView" customModule="SocialBannersApp" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="32" width="32" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="OgN-E0-LOz" secondAttribute="height" multiplier="1:1" id="bhB-Uh-cci"/>
