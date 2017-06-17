@@ -23,10 +23,18 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBOutlet weak var backToBannersButton: BackToBannersButton!
     @IBOutlet weak var imagesCollectionView: NSCollectionView!
     @IBOutlet weak var enterTitleField: NSTextField!
+    @IBOutlet weak var enterSubtitleField: NSTextField!
+    
+    @IBOutlet weak var changeNBBackgroundColorButton: ChangeButton!
+    @IBOutlet weak var changeNBContentColorButton: ChangeButton!
+    @IBOutlet weak var changeNBContentFontButton: ChangeButton!
+    
+    @IBOutlet weak var saveNewBannerButton: SaveButton!
     
 // MARK: - New Banner Elements
     
     @IBOutlet weak var titleForNewBanner: NSTextField!
+    @IBOutlet weak var subtitleForNewBanner: NSTextField!
     @IBOutlet weak var imageForNewBannerView: NSView!
     
 // MARK: - Private variables
@@ -48,6 +56,11 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         headerStartOrigin = roundedHeaderView.frame.origin
         substrateStartFrame = substrateHeaderView.frame
         newBannerStartFrame = newBannerView.frame
+        
+        changeNBBackgroundColorButton.draw(changeNBBackgroundColorButton.frame)
+        changeNBContentColorButton.draw(changeNBContentColorButton.frame)
+        changeNBContentFontButton.draw(changeNBContentFontButton.frame)
+        saveNewBannerButton.draw(saveNewBannerButton.frame)
         
         self.topScrollPoint = CGPoint(x: 0,
                                       y: createBannerView.bounds.height - scrollView.bounds.height)
@@ -128,6 +141,17 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         if enterTextField == enterTitleField {
             if enterTitleField.stringValue.characters.count <= 15 {
                 self.titleForNewBanner.stringValue = enterTitleField.stringValue
+            }
+        } else if enterTextField == enterSubtitleField {
+            /*
+            titleForNewBanner.translatesAutoresizingMaskIntoConstraints = true
+            let newTitleOrigin =
+            CGPoint(x: titleForNewBanner.frame.origin.x,
+                    y: newBannerView.bounds.height / 2)
+            titleForNewBanner.setFrameOrigin(newTitleOrigin)    
+            */
+            if enterTextField.stringValue.characters.count <= 20 {
+                self.subtitleForNewBanner.stringValue = enterTextField.stringValue
             }
         }
         
