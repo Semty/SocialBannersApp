@@ -100,7 +100,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         (collectionViewItem.view as! BackgroundImageView).setBackgroundImage(withIndex: indexPath.item, andColor: .white)
         
         let isItemSelected = collectionView.selectionIndexPaths.contains(indexPath)
-        collectionViewItem.setHighlight(isItemSelected)
+        collectionViewItem.setHighlight(isItemSelected, atIndex: indexPath.item)
         
         return item
     }
@@ -110,7 +110,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     public func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         for indexPath in indexPaths {
             guard let item = collectionView.item(at: indexPath) else {continue}
-            (item as! ImageBannerCollectionItem).setHighlight(true)
+            (item as! ImageBannerCollectionItem).setHighlight(true, atIndex: indexPath.item)
 // FIXME: - Need fix color
             if indexPath.item != 0 {
                 imageForNewBannerView.setBackgroundImage(withIndex: indexPath.item,
@@ -126,7 +126,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     public func collectionView(_ collectionView: NSCollectionView, didDeselectItemsAt indexPaths: Set<IndexPath>) {
         for indexPath in indexPaths {
             guard let item = collectionView.item(at: indexPath) else {continue}
-            (item as! ImageBannerCollectionItem).setHighlight(false)
+            (item as! ImageBannerCollectionItem).setHighlight(false, atIndex: indexPath.item)
         }
     }
     
@@ -218,9 +218,9 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     fileprivate func configureCollectionView() {
         let flowLayout = NSCollectionViewFlowLayout()
         flowLayout.itemSize = NSSize(width: 40.0, height: 40.0)
-        flowLayout.sectionInset = EdgeInsets(top: 0.0, left: 10.0, bottom: 20.0, right: 10.0)
+        flowLayout.sectionInset = EdgeInsets(top: 0.0, left: 159.0, bottom: 20.0, right: 159.0)
         flowLayout.minimumInteritemSpacing = 10.0
-        flowLayout.minimumLineSpacing = 10.0
+        flowLayout.minimumLineSpacing = 20.0
         flowLayout.scrollDirection = .horizontal
         
         imagesCollectionView.collectionViewLayout = flowLayout

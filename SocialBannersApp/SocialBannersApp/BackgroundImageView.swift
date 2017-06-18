@@ -137,29 +137,29 @@ class BackgroundImageView: NSView {
 
 enum ImageIndex: Int {
     case empty = 0
-    case doc
-    case painter
-    case picture
-    case diagram
-    case brush
-    case social
-    case flyer
-    case speaker
-    case time
-    case hot
-    case music
-    case world
-    case rain
-    case sun
-    case moon
-    case ok
-    case search
-    case repair
-    case alarm
-    case map
-    case location
-    case gamepad
-    case charts
-    case eat
+    case doc = 16
+    case painter = 10
+    case picture = 12
+    case diagram = 14
+    case brush = 11
+    case social = 3
+    case flyer = 17
+    case speaker = 1
+    case time = 2
+    case hot = 5
+    case music = 13
+    case world = 24
+    case rain = 8
+    case sun = 7
+    case moon = 9
+    case ok = 6
+    case search = 4
+    case repair = 18
+    case alarm = 21
+    case map = 23
+    case location = 22
+    case gamepad = 19
+    case charts = 15
+    case eat = 20
 }
 
