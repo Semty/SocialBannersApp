@@ -1,5 +1,5 @@
 //
-//  ImageBannerModel.swift
+//  IconsCollectionModel.swift
 //  SocialBannersApp
 //
 //  Created by Ruslan Timchenko on 13.06.2017.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ImageBannerModel: NSObject {
+class IconsCollectionModel: NSObject {
 
     fileprivate(set) var numberOfSections   = 1
     fileprivate(set) var numberOfItems      = 25 // Default

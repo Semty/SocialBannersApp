@@ -25,8 +25,14 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBOutlet weak var enterTitleField: NSTextField!
     @IBOutlet weak var enterSubtitleField: NSTextField!
     
+    @IBOutlet weak var bgColorLabel: NSTextField!
+    @IBOutlet weak var bgColorView: BGColorView!
     @IBOutlet weak var changeNBBackgroundColorButton: ChangeButton!
+    
+    @IBOutlet weak var contentColorLabel: NSTextField!
+    @IBOutlet weak var contentColorView: NSView!
     @IBOutlet weak var changeNBContentColorButton: ChangeButton!
+    
     @IBOutlet weak var changeNBContentFontButton: ChangeButton!
     
     @IBOutlet weak var saveNewBannerButton: SaveButton!
@@ -46,7 +52,10 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
 // MARK: - Public variables
     
-    let imageBannerModel = ImageBannerModel()
+    let imageBannerModel = IconsCollectionModel()
+    let newBannerModel = BannerModel()
+    
+// MARK: - View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +86,34 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                                                object: scrollView.contentView)
         // Configure Collection View
         configureCollectionView()
+        imagesCollectionView.selectItems(at: [IndexPath.init(item: newBannerModel.iconImage.rawValue,
+                                                             section: 0)],
+                                         scrollPosition: NSCollectionViewScrollPosition.centeredHorizontally)
+        if newBannerModel.iconImage != .empty {
+            imageForNewBannerView.setBackgroundImage(withIndex: newBannerModel.iconImage.rawValue,
+                                                     andColor: newBannerModel.contentColor)
+        } else {
+            imageForNewBannerView.color = .clear
+        }
+    }
+    
+// MARK: - View Will Appear
+    
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        self.newBannerView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
+        self.titleForNewBanner.font = NSFont(name: newBannerModel.fontName,
+                                             size: 14.0)
+        self.titleForNewBanner.textColor = newBannerModel.contentColor
+        self.subtitleForNewBanner.font = NSFont(name: newBannerModel.fontName,
+                                                size: 12.0)
+        self.subtitleForNewBanner.textColor = newBannerModel.contentColor
+        
+        self.bgColorLabel.stringValue = newBannerModel.bgColorName
+        self.bgColorView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
+        
+        self.contentColorLabel.stringValue = newBannerModel.contentColorName
+        self.contentColorView.layer?.backgroundColor = newBannerModel.contentColor.cgColor
     }
     
 // MARK: - NSCollectionViewDataSource
@@ -111,15 +148,16 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         for indexPath in indexPaths {
             guard let item = collectionView.item(at: indexPath) else {continue}
             (item as! ImageBannerCollectionItem).setHighlight(true, atIndex: indexPath.item)
-// FIXME: - Need fix color
+
             if indexPath.item != 0 {
                 imageForNewBannerView.setBackgroundImage(withIndex: indexPath.item,
-                                                         andColor: .black)
+                                                         andColor: newBannerModel.contentColor)
             } else {
                 imageForNewBannerView.color = .clear
             }
             
             imageForNewBannerView.layer?.setNeedsDisplay()
+            newBannerModel.iconImage = ImageIndex(rawValue: indexPath.item)!
         }
     }
     
@@ -147,7 +185,8 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         
         if enterTextField == enterTitleField {
             if enterTitleField.stringValue.characters.count <= 15 {
-                self.titleForNewBanner.stringValue = enterTitleField.stringValue
+
+            self.titleForNewBanner.stringValue = enterTextField.stringValue
             }
         } else if enterTextField == enterSubtitleField {
             /*
@@ -157,11 +196,15 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                     y: newBannerView.bounds.height / 2)
             titleForNewBanner.setFrameOrigin(newTitleOrigin)    
             */
-            if enterTextField.stringValue.characters.count <= 20 {
-                self.subtitleForNewBanner.stringValue = enterTextField.stringValue
-            }
+            self.subtitleForNewBanner.stringValue = enterTextField.stringValue
         }
+    
+    }
+    
+    @IBAction func changeNBBackgroundColorAction(_ sender: Any) {
         
+        let changeNBVC = self.storyboard?.instantiateController(withIdentifier: "SelectBackgroundColorController") as! SelectBackgroundColorController
+        self.presentViewControllerAsSheet(changeNBVC)
     }
     
 // MARK: - Tracking of the scroll position
@@ -184,36 +227,37 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
 // MARK: - Scrolling Functions
     
     func scrollToDown(withScrollYOffset scrollYOffset: CGFloat) {
-        let substrateYOffset: CGFloat = (scrollYOffset <= 0 && scrollYOffset >= -20) ? scrollYOffset : -20
         
-        let isDownForNewBanner: Bool = substrateYOffset / -20 >= 0 && substrateYOffset / -20 <= 1
-        let isDownNewBannerXOffset: CGFloat = 1.05 * 10.0 * (substrateYOffset / -20)
-        let newBannerXOffset: CGFloat = isDownForNewBanner ? isDownNewBannerXOffset : 1.05 * 10.0
+        let substrateYOffset: CGFloat = (scrollYOffset <= 0 && scrollYOffset >= -20) ? scrollYOffset : -20
         
         let newOriginForHeader = CGPoint(x: headerStartOrigin.x,
                                          y: headerStartOrigin.y + scrollYOffset - substrateYOffset)
-        let newSizeForNewBanner =
-        CGSize(width: newBannerStartFrame.size.width + substrateYOffset,
-               height: newBannerStartFrame.size.height + substrateYOffset)
+        let offsetPercent = (scrollYOffset <= 0 && scrollYOffset >= -20) ? scrollYOffset/(-20) : 1.0
         let newOriginForNewBanner =
-            CGPoint(x: newBannerStartFrame.origin.x + newBannerXOffset,
-                    y: newBannerStartFrame.origin.y + scrollYOffset - substrateYOffset*2.25)
+            CGPoint(x: newBannerStartFrame.origin.x + 15*offsetPercent,
+                    y: newBannerStartFrame.origin.y + scrollYOffset + 40*offsetPercent)
         
         roundedHeaderView.setFrameOrigin(newOriginForHeader)
         
         newBannerView.setFrameOrigin(newOriginForNewBanner)
-        newBannerView.setFrameSize(newSizeForNewBanner)
+        
+        let xyScaleOffset = (scrollYOffset <= 0 && scrollYOffset >= -20) ? scrollYOffset/160 : -20/160
+        let newBannerScale = 1.0 + xyScaleOffset
+        newBannerView.layer?.setAffineTransform(CGAffineTransform.init(scaleX: newBannerScale,
+                                                                       y: newBannerScale))
     }
     
     func scrollToUp(withScrollYOffset scrollYOffset: CGFloat) {
+        
         substrateHeaderView.setFrameSize(NSSize.init(width: substrateHeaderView.bounds.width,
                                                      height: substrateStartFrame.size.height + scrollYOffset))
         
         substrateHeaderView.setFrameOrigin(NSPoint.init(x: substrateStartFrame.origin.x,
                                                         y: substrateStartFrame.origin.y - scrollYOffset))
+ 
     }
 
-// MARK: - Helpful Functions
+// MARK: - Configure CollectionView
     
     fileprivate func configureCollectionView() {
         let flowLayout = NSCollectionViewFlowLayout()

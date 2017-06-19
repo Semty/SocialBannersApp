@@ -11,17 +11,22 @@
 		70B5C7961CA61617F70F13DA /* Pods_SocialBannersAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 490BD1BF5BB395AB1B41C166 /* Pods_SocialBannersAppTests.framework */; };
 		9FFA20544EFD2AA6429D652A /* Pods_SocialBannersAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0606F49FF2ED59EE1CF0141B /* Pods_SocialBannersAppUITests.framework */; };
 		D500651F1EED4AFB00FDEB35 /* IconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500651E1EED4AFB00FDEB35 /* IconLabel.swift */; };
-		D50065221EEFEE3500FDEB35 /* ImageBannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065211EEFEE3500FDEB35 /* ImageBannerModel.swift */; };
+		D50065221EEFEE3500FDEB35 /* IconsCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065211EEFEE3500FDEB35 /* IconsCollectionModel.swift */; };
 		D50065271EEFF92200FDEB35 /* ImageBannerCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065251EEFF92200FDEB35 /* ImageBannerCollectionItem.swift */; };
 		D50065281EEFF92200FDEB35 /* ImageBannerCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D50065261EEFF92200FDEB35 /* ImageBannerCollectionItem.xib */; };
 		D500652B1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500652A1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift */; };
 		D500652D1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */; };
-		D50065321EF1361400FDEB35 /* TypeTitleForNewBannerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065311EF1361400FDEB35 /* TypeTitleForNewBannerField.swift */; };
-		D50065341EF5B14500FDEB35 /* BackgroundColorForNewBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065331EF5B14500FDEB35 /* BackgroundColorForNewBannerView.swift */; };
 		D50065361EF5B49200FDEB35 /* ChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065351EF5B49200FDEB35 /* ChangeButton.swift */; };
 		D50065381EF5C0A200FDEB35 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065371EF5C0A200FDEB35 /* SaveButton.swift */; };
 		D500653A1EF5D01B00FDEB35 /* BannersIconsBezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065391EF5D01B00FDEB35 /* BannersIconsBezierPaths.swift */; };
 		D500653E1EF5D46000FDEB35 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500653D1EF5D46000FDEB35 /* BackgroundImageView.swift */; };
+		D50065421EF684C400FDEB35 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065411EF684C400FDEB35 /* ColorModel.swift */; };
+		D50065441EF6852F00FDEB35 /* AppContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065431EF6852F00FDEB35 /* AppContents.swift */; };
+		D50065461EF6D71800FDEB35 /* SelectBackgroundColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065451EF6D71800FDEB35 /* SelectBackgroundColorController.swift */; };
+		D50065481EF6DA5600FDEB35 /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065471EF6DA5600FDEB35 /* BannerModel.swift */; };
+		D500654F1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D500654D1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.swift */; };
+		D50065501EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D500654E1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib */; };
+		D50065531EF8560D00FDEB35 /* BGColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065521EF8560D00FDEB35 /* BGColorView.swift */; };
 		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
 		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
 		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
@@ -69,17 +74,22 @@
 		8E97E1713951AABFDCBD949A /* Pods-SocialBannersAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CC1B6BC00B0E54BB508BCD9 /* Pods_SocialBannersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialBannersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D500651E1EED4AFB00FDEB35 /* IconLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
-		D50065211EEFEE3500FDEB35 /* ImageBannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBannerModel.swift; sourceTree = "<group>"; };
+		D50065211EEFEE3500FDEB35 /* IconsCollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsCollectionModel.swift; sourceTree = "<group>"; };
 		D50065251EEFF92200FDEB35 /* ImageBannerCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageBannerCollectionItem.swift; sourceTree = "<group>"; };
 		D50065261EEFF92200FDEB35 /* ImageBannerCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageBannerCollectionItem.xib; sourceTree = "<group>"; };
 		D500652A1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesBannerScrollView.swift; sourceTree = "<group>"; };
 		D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTitleForNewBannerView.swift; sourceTree = "<group>"; };
-		D50065311EF1361400FDEB35 /* TypeTitleForNewBannerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeTitleForNewBannerField.swift; sourceTree = "<group>"; };
-		D50065331EF5B14500FDEB35 /* BackgroundColorForNewBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorForNewBannerView.swift; sourceTree = "<group>"; };
 		D50065351EF5B49200FDEB35 /* ChangeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeButton.swift; sourceTree = "<group>"; };
 		D50065371EF5C0A200FDEB35 /* SaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		D50065391EF5D01B00FDEB35 /* BannersIconsBezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersIconsBezierPaths.swift; sourceTree = "<group>"; };
 		D500653D1EF5D46000FDEB35 /* BackgroundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		D50065411EF684C400FDEB35 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		D50065431EF6852F00FDEB35 /* AppContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContents.swift; sourceTree = "<group>"; };
+		D50065451EF6D71800FDEB35 /* SelectBackgroundColorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectBackgroundColorController.swift; sourceTree = "<group>"; };
+		D50065471EF6DA5600FDEB35 /* BannerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
+		D500654D1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BgColorBannerCollectionItem.swift; sourceTree = "<group>"; };
+		D500654E1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BgColorBannerCollectionItem.xib; sourceTree = "<group>"; };
+		D50065521EF8560D00FDEB35 /* BGColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGColorView.swift; sourceTree = "<group>"; };
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +173,9 @@
 		D50065201EEFED9B00FDEB35 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D50065211EEFEE3500FDEB35 /* ImageBannerModel.swift */,
+				D50065211EEFEE3500FDEB35 /* IconsCollectionModel.swift */,
+				D50065411EF684C400FDEB35 /* ColorModel.swift */,
+				D50065471EF6DA5600FDEB35 /* BannerModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -175,6 +187,55 @@
 				D500652A1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift */,
 			);
 			name = "Scroll directions";
+			sourceTree = "<group>";
+		};
+		D50065491EF6EC1B00FDEB35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA65571EE3196600AD40A6 /* NewBannerView.swift */,
+				D5BA65531EE1A62A00AD40A6 /* GradientView.swift */,
+				D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */,
+				D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */,
+				D500653D1EF5D46000FDEB35 /* BackgroundImageView.swift */,
+				D5BA65501EE1A3B500AD40A6 /* White Rounded Squad */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D500654A1EF6EC2F00FDEB35 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */,
+				D50065351EF5B49200FDEB35 /* ChangeButton.swift */,
+				D50065371EF5C0A200FDEB35 /* SaveButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		D500654B1EF6ED0000FDEB35 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				D500651E1EED4AFB00FDEB35 /* IconLabel.swift */,
+			);
+			name = Labels;
+			sourceTree = "<group>";
+		};
+		D500654C1EF6ED5F00FDEB35 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D58A110B1EC879EA00B708F9 /* ViewController.swift */,
+				D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */,
+				D50065451EF6D71800FDEB35 /* SelectBackgroundColorController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D50065511EF855CE00FDEB35 /* ChangeBGColor */ = {
+			isa = PBXGroup;
+			children = (
+				D50065521EF8560D00FDEB35 /* BGColorView.swift */,
+			);
+			name = ChangeBGColor;
 			sourceTree = "<group>";
 		};
 		D58A10FD1EC879EA00B708F9 = {
@@ -203,13 +264,14 @@
 			isa = PBXGroup;
 			children = (
 				D58A11091EC879EA00B708F9 /* AppDelegate.swift */,
-				D58A110B1EC879EA00B708F9 /* ViewController.swift */,
-				D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */,
-				D50065251EEFF92200FDEB35 /* ImageBannerCollectionItem.swift */,
+				D500654C1EF6ED5F00FDEB35 /* Controllers */,
 				D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */,
 				D50065201EEFED9B00FDEB35 /* Model */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
+				D500654D1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.swift */,
+				D500654E1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib */,
+				D50065251EEFF92200FDEB35 /* ImageBannerCollectionItem.swift */,
 				D50065261EEFF92200FDEB35 /* ImageBannerCollectionItem.xib */,
 				D58A11121EC879EB00B708F9 /* Info.plist */,
 			);
@@ -239,8 +301,10 @@
 			children = (
 				D5BA65511EE1A5C500AD40A6 /* MyBanners */,
 				D5BA65521EE1A5D800AD40A6 /* Create New Banner */,
+				D50065511EF855CE00FDEB35 /* ChangeBGColor */,
 				D5BA65461EE1887200AD40A6 /* BaseElementsBezierPaths.swift */,
 				D50065391EF5D01B00FDEB35 /* BannersIconsBezierPaths.swift */,
+				D50065431EF6852F00FDEB35 /* AppContents.swift */,
 			);
 			name = "Custom Controls and Views";
 			sourceTree = "<group>";
@@ -268,19 +332,10 @@
 		D5BA65521EE1A5D800AD40A6 /* Create New Banner */ = {
 			isa = PBXGroup;
 			children = (
-				D5BA65571EE3196600AD40A6 /* NewBannerView.swift */,
-				D5BA65531EE1A62A00AD40A6 /* GradientView.swift */,
-				D5BA65481EE18A2D00AD40A6 /* CrtBnnrMainView.swift */,
-				D500652C1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift */,
-				D50065331EF5B14500FDEB35 /* BackgroundColorForNewBannerView.swift */,
-				D500653D1EF5D46000FDEB35 /* BackgroundImageView.swift */,
-				D50065311EF1361400FDEB35 /* TypeTitleForNewBannerField.swift */,
-				D5BA65441EE1852200AD40A6 /* BackToBannersButton.swift */,
-				D50065351EF5B49200FDEB35 /* ChangeButton.swift */,
-				D50065371EF5C0A200FDEB35 /* SaveButton.swift */,
-				D500651E1EED4AFB00FDEB35 /* IconLabel.swift */,
+				D50065491EF6EC1B00FDEB35 /* Views */,
+				D500654A1EF6EC2F00FDEB35 /* Buttons */,
+				D500654B1EF6ED0000FDEB35 /* Labels */,
 				D50065291EEFFE5E00FDEB35 /* Scroll directions */,
-				D5BA65501EE1A3B500AD40A6 /* White Rounded Squad */,
 			);
 			name = "Create New Banner";
 			sourceTree = "<group>";
@@ -402,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58A110E1EC879EB00B708F9 /* Assets.xcassets in Resources */,
+				D50065501EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib in Resources */,
 				D50065281EEFF92200FDEB35 /* ImageBannerCollectionItem.xib in Resources */,
 				D58A11111EC879EB00B708F9 /* Main.storyboard in Resources */,
 			);
@@ -567,31 +623,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				D500652D1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift in Sources */,
+				D500654F1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.swift in Sources */,
 				D5BA654B1EE196B500AD40A6 /* WhiteSquadPartView.swift in Sources */,
 				D5BA654D1EE1A2BA00AD40A6 /* WhiteRoundedView.swift in Sources */,
 				D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */,
 				D500651F1EED4AFB00FDEB35 /* IconLabel.swift in Sources */,
 				D5BA654F1EE1A30E00AD40A6 /* RoundedPartView.swift in Sources */,
 				D5BA65471EE1887200AD40A6 /* BaseElementsBezierPaths.swift in Sources */,
+				D50065531EF8560D00FDEB35 /* BGColorView.swift in Sources */,
 				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
 				D5BA653E1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift in Sources */,
+				D50065481EF6DA5600FDEB35 /* BannerModel.swift in Sources */,
 				D500652B1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift in Sources */,
 				D5BA65561EE2CB1200AD40A6 /* SubstrateHeaderView.swift in Sources */,
+				D50065421EF684C400FDEB35 /* ColorModel.swift in Sources */,
 				D500653E1EF5D46000FDEB35 /* BackgroundImageView.swift in Sources */,
 				D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */,
-				D50065321EF1361400FDEB35 /* TypeTitleForNewBannerField.swift in Sources */,
 				D50065271EEFF92200FDEB35 /* ImageBannerCollectionItem.swift in Sources */,
+				D50065461EF6D71800FDEB35 /* SelectBackgroundColorController.swift in Sources */,
 				D50065381EF5C0A200FDEB35 /* SaveButton.swift in Sources */,
 				D5BA65451EE1852200AD40A6 /* BackToBannersButton.swift in Sources */,
 				D500653A1EF5D01B00FDEB35 /* BannersIconsBezierPaths.swift in Sources */,
 				D5BA65581EE3196600AD40A6 /* NewBannerView.swift in Sources */,
-				D50065221EEFEE3500FDEB35 /* ImageBannerModel.swift in Sources */,
-				D50065341EF5B14500FDEB35 /* BackgroundColorForNewBannerView.swift in Sources */,
+				D50065221EEFEE3500FDEB35 /* IconsCollectionModel.swift in Sources */,
 				D50065361EF5B49200FDEB35 /* ChangeButton.swift in Sources */,
 				D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */,
 				D5BA65541EE1A62A00AD40A6 /* GradientView.swift in Sources */,
 				D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */,
 				D5BA65491EE18A2D00AD40A6 /* CrtBnnrMainView.swift in Sources */,
+				D50065441EF6852F00FDEB35 /* AppContents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
