@@ -10,6 +10,21 @@ import Cocoa
 
 class AppContents: NSObject {
 
+    static func getFontsModel() -> [FontModel] {
+        return [
+            FontModel(type: .avenirNextDemiBold),
+            FontModel(type: .avenitNextBold),
+            FontModel(type: .avenirNextMedium),
+            FontModel(type: .avenirNexRegular),
+            FontModel(type: .avenirNextCondensedMedium),
+            FontModel(type: .avenirNextCondensedBold),
+            FontModel(type: .georgia),
+            FontModel(type: .georgiaBold),
+            FontModel(type: .gillSans),
+            FontModel(type: .gillSansBold)
+        ]
+    }
+    
     static func getContentColor() -> [ColorModel] {
         return [
             ColorModel(name: "Sky",

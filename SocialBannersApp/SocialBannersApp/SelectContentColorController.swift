@@ -1,24 +1,24 @@
 //
-//  SelectBackgroundColorController.swift
+//  SelectContentColorController.swift
 //  SocialBannersApp
 //
-//  Created by Ruslan Timchenko on 18.06.2017.
+//  Created by Ruslan Timchenko on 20.06.2017.
 //  Copyright © 2017 Ruslan Timchenko. All rights reserved.
 //
 
 import Cocoa
 
-class SelectBackgroundColorController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
-
+class SelectContentColorController: NSViewController, NSCollectionViewDataSource, NSCollectionViewDelegate {
+    
 // MARK: - IBOutlet's
     
-    @IBOutlet weak var colorCollection: NSCollectionView!
     @IBOutlet weak var colorScrollView: NSScrollView!
+    @IBOutlet weak var colorCollection: NSCollectionView!
     
 // MARK: - Private Variables
     
-    let backgroundColors = AppContents.getBackgroundColors()
-    
+    let backgroundColors = AppContents.getContentColor()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
@@ -38,21 +38,15 @@ class SelectBackgroundColorController: NSViewController, NSCollectionViewDataSou
     
     public func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
-        let item = collectionView.makeItem(withIdentifier: "BgColorBannerCollectionItem",
+        let item = collectionView.makeItem(withIdentifier: "ContentColorBannerCollectionItem",
                                            for: indexPath)
-        guard let collectionViewItem = item as? BgColorBannerCollectionItem else {
+        guard let collectionViewItem = item as? ContentColorBannerCollectionItem else {
             return item
         }
         
-        let bgColorView = collectionViewItem.view as! BGColorView
+        let colorModel = backgroundColors[indexPath.item+indexPath.section*3]
         
-        let gradientModel = backgroundColors[indexPath.item+indexPath.section*3]
-        
-        if let bgColor = gradientModel.fillColor {
-            bgColorView.setBackgroundColor(withColors: [bgColor.cgColor, bgColor.cgColor])
-        } else {
-            bgColorView.setBackgroundColor(withColors: [gradientModel.firstGradientColor!.cgColor, gradientModel.secondGradientColor!.cgColor])
-        }
+        collectionViewItem.view.layer?.backgroundColor = colorModel.fillColor?.cgColor
         
         return item
     }
@@ -61,30 +55,28 @@ class SelectBackgroundColorController: NSViewController, NSCollectionViewDataSou
     
     public func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         for indexPath in indexPaths {
-            guard let item = collectionView.item(at: indexPath) else {continue}
             
-            let gradientModel = backgroundColors[indexPath.item+indexPath.section*3]
-            let gradientColor = (item.view as! BGColorView).backgroundColors
+            let colorModel = backgroundColors[indexPath.item+indexPath.section*3]
             
             let addNewBannerVC = self.presenting as! CreateNewBannerViewController
             
-            addNewBannerVC.newBannerModel.backgroundColor = gradientColor
-            addNewBannerVC.newBannerView.setBackgroundColor(withColors: gradientColor)
+            addNewBannerVC.newBannerModel.contentColorName = colorModel.name
+            addNewBannerVC.contentColorLabel.stringValue = colorModel.name
             
-            addNewBannerVC.newBannerModel.bgColorName = gradientModel.name
-            addNewBannerVC.bgColorLabel.stringValue = gradientModel.name
-            
-            addNewBannerVC.bgColorView.setBackgroundColor(withColors: gradientColor)
+            addNewBannerVC.newBannerModel.contentColor = colorModel.fillColor!
+            addNewBannerVC.contentColorView.layer?.backgroundColor = colorModel.fillColor?.cgColor
+            addNewBannerVC.updateNBContentColor(withContentColor: colorModel.fillColor!)
+            addNewBannerVC.imageForNewBannerView.layer?.setNeedsDisplay()
             
             self.dismiss(nil)
         }
     }
     
+
+    
 // MARK: - Actions
     
-    @IBAction func backToAddNewBannerAction(_ sender: Any) {
-        
-        //let addNewBannerVC = self.presenting as! CreateNewBannerViewController
+    @IBAction func backToCreateBunnerAction(_ sender: Any) {
         self.dismiss(sender)
     }
     

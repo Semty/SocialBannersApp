@@ -30,9 +30,10 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBOutlet weak var changeNBBackgroundColorButton: ChangeButton!
     
     @IBOutlet weak var contentColorLabel: NSTextField!
-    @IBOutlet weak var contentColorView: NSView!
+    @IBOutlet weak var contentColorView: ContentColorView!
     @IBOutlet weak var changeNBContentColorButton: ChangeButton!
     
+    @IBOutlet weak var changeNBContentFontLabel: NSTextField!
     @IBOutlet weak var changeNBContentFontButton: ChangeButton!
     
     @IBOutlet weak var saveNewBannerButton: SaveButton!
@@ -93,7 +94,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             imageForNewBannerView.setBackgroundImage(withIndex: newBannerModel.iconImage.rawValue,
                                                      andColor: newBannerModel.contentColor)
         } else {
-            imageForNewBannerView.color = .clear
+            imageForNewBannerView.isHidden = true
         }
     }
     
@@ -102,12 +103,9 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     override func viewWillAppear() {
         super.viewWillAppear()
         self.newBannerView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
-        self.titleForNewBanner.font = NSFont(name: newBannerModel.fontName,
-                                             size: 14.0)
-        self.titleForNewBanner.textColor = newBannerModel.contentColor
-        self.subtitleForNewBanner.font = NSFont(name: newBannerModel.fontName,
-                                                size: 12.0)
-        self.subtitleForNewBanner.textColor = newBannerModel.contentColor
+        
+        self.updateNBFont(withType: newBannerModel.fontType)
+        self.updateNBContentColor(withContentColor: newBannerModel.contentColor)
         
         self.bgColorLabel.stringValue = newBannerModel.bgColorName
         self.bgColorView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
@@ -150,10 +148,11 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             (item as! ImageBannerCollectionItem).setHighlight(true, atIndex: indexPath.item)
 
             if indexPath.item != 0 {
+                imageForNewBannerView.isHidden = false
                 imageForNewBannerView.setBackgroundImage(withIndex: indexPath.item,
                                                          andColor: newBannerModel.contentColor)
             } else {
-                imageForNewBannerView.color = .clear
+                imageForNewBannerView.isHidden = true
             }
             
             imageForNewBannerView.layer?.setNeedsDisplay()
@@ -184,26 +183,63 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         let enterTextField = obj.object as! NSTextField
         
         if enterTextField == enterTitleField {
-            if enterTitleField.stringValue.characters.count <= 15 {
-
+            if enterTitleField.stringValue.characters.count <= 20 {
             self.titleForNewBanner.stringValue = enterTextField.stringValue
+            self.titleForNewBanner.font =
+                self.calculateFont(toFit: self.titleForNewBanner,
+                                   withString: self.titleForNewBanner.stringValue as NSString,
+                                   minSize: 1,
+                                   maxSize: 15)
             }
         } else if enterTextField == enterSubtitleField {
-            /*
-            titleForNewBanner.translatesAutoresizingMaskIntoConstraints = true
-            let newTitleOrigin =
-            CGPoint(x: titleForNewBanner.frame.origin.x,
-                    y: newBannerView.bounds.height / 2)
-            titleForNewBanner.setFrameOrigin(newTitleOrigin)    
-            */
-            self.subtitleForNewBanner.stringValue = enterTextField.stringValue
+            if enterTextField.stringValue.characters.count > 0 {
+                let newTitleOrigin =
+                    CGPoint(x: titleForNewBanner.frame.origin.x,
+                            y: 46)
+                titleForNewBanner.setFrameOrigin(newTitleOrigin)
+                let newSubtitleOrigin =
+                    CGPoint(x: subtitleForNewBanner.frame.origin.x,
+                            y: 18)
+                subtitleForNewBanner.setFrameOrigin(newSubtitleOrigin)
+            } else {
+                let newTitleOrigin =
+                    CGPoint(x: titleForNewBanner.frame.origin.x,
+                            y: 33)
+                titleForNewBanner.setFrameOrigin(newTitleOrigin)
+                let newSubtitleOrigin =
+                    CGPoint(x: subtitleForNewBanner.frame.origin.x,
+                            y: 6)
+                subtitleForNewBanner.setFrameOrigin(newSubtitleOrigin)
+            }
+ 
+            if enterSubtitleField.stringValue.characters.count <= 30 {
+                self.subtitleForNewBanner.stringValue = enterTextField.stringValue
+                self.subtitleForNewBanner.font =
+                    self.calculateFont(toFit: self.subtitleForNewBanner,
+                                       withString: self.subtitleForNewBanner.stringValue as NSString,
+                                       minSize: 1,
+                                       maxSize: 14)
+            }
         }
     
     }
     
+// MARK: - Transitions
+    
     @IBAction func changeNBBackgroundColorAction(_ sender: Any) {
         
         let changeNBVC = self.storyboard?.instantiateController(withIdentifier: "SelectBackgroundColorController") as! SelectBackgroundColorController
+        self.presentViewControllerAsSheet(changeNBVC)
+    }
+    
+    @IBAction func changeNBContentColorAction(_ sender: Any) {
+        
+        let changeNBVC = self.storyboard?.instantiateController(withIdentifier: "SelectContentColorController") as! SelectContentColorController
+        self.presentViewControllerAsSheet(changeNBVC)
+    }
+    
+    @IBAction func changeNBContentFontAction(_ sender: Any) {
+        let changeNBVC = self.storyboard?.instantiateController(withIdentifier: "SelectFontNameController") as! SelectFontNameController
         self.presentViewControllerAsSheet(changeNBVC)
     }
     
@@ -256,6 +292,19 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                                                         y: substrateStartFrame.origin.y - scrollYOffset))
  
     }
+    
+    func calculateFont(toFit textField: NSTextField, withString string: NSString, minSize min: Int, maxSize max: Int) -> NSFont {
+        for i in min...max {
+            var attr: [String: Any] = [:] as Dictionary
+            attr[NSFontSizeAttribute] = NSFont(name: textField.font!.fontName, size: CGFloat(i))!
+            let strSize = string.size(withAttributes: [NSFontAttributeName: NSFont.systemFont(ofSize: CGFloat(i))])
+            let linesNumber = Int(textField.bounds.height/strSize.height)
+            if strSize.width/CGFloat(linesNumber) > textField.bounds.width {
+                return (i == min ? NSFont(name: "\(textField.font!.fontName)", size: CGFloat(min)) : NSFont(name: "\(textField.font!.fontName)", size: CGFloat(i-1)))!
+            }
+        }
+        return NSFont(name: "\(textField.font!.fontName)", size: CGFloat(max))!
+    }
 
 // MARK: - Configure CollectionView
     
@@ -269,6 +318,35 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         
         imagesCollectionView.collectionViewLayout = flowLayout
         view.wantsLayer = true
+    }
+    
+// MARK: - New Banner Updating Functions
+    
+    public func updateNBFont(withType font: FontModel) {
+        
+        self.titleForNewBanner.font = NSFont(name: font.type.rawValue,
+                                             size: 15.0)
+        self.subtitleForNewBanner.font = NSFont(name: font.type.rawValue,
+                                                size: 14.0)
+ 
+        self.titleForNewBanner.font =
+            self.calculateFont(toFit: self.titleForNewBanner,
+                               withString: self.titleForNewBanner.stringValue as NSString,
+                               minSize: 1,
+                               maxSize: 15)
+        self.subtitleForNewBanner.font =
+            self.calculateFont(toFit: self.subtitleForNewBanner,
+                               withString: self.subtitleForNewBanner.stringValue as NSString,
+                               minSize: 1,
+                               maxSize: 15)
+        self.changeNBContentFontLabel.stringValue = font.type.rawValue
+    }
+    
+    public func updateNBContentColor(withContentColor color: NSColor) {
+        self.titleForNewBanner.textColor = color
+        self.subtitleForNewBanner.textColor = color
+        self.imageForNewBannerView.setBackgroundImage(withIndex: newBannerModel.iconImage.rawValue,
+                                                      andColor: color)
     }
     
 }

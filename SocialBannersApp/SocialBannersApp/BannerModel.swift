@@ -15,5 +15,5 @@ class BannerModel: NSObject {
     var backgroundColor = [NSColor.white.cgColor, NSColor.white.cgColor]  // default
     var bgColorName = "White"
     var contentColorName = "Sky"
-    var fontName = "Avenir Next Medium"
+    var fontType = FontModel(type: .avenirNextMedium)
 }
