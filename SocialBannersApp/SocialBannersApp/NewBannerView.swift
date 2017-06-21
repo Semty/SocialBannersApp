@@ -13,6 +13,10 @@ class NewBannerView: NSView {
     var gradientLayer = CAGradientLayer()
     var backgroundColors: [CGColor] = [.white, .white]
     
+    var backgroundImageView: BackgroundImageView?
+    var titleTextField: TitleTextField?
+    var subtitleTextField: SubtitleTextField?
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
@@ -40,6 +44,84 @@ class NewBannerView: NSView {
             self.layer?.addSublayer(gradientLayer)
             gradientLayer.cornerRadius = 6.0
             gradientLayer.frame = self.bounds
+        }
+    }
+    
+    override func layout() {
+        super.layout()
+        
+        if setAllElements() {
+            imageHiddenLayout()
+            subtitleHiddenLayout()
+        }
+    }
+    
+    func subtitleHiddenLayout() {
+        if (subtitleTextField?.isHidden)! {
+            let newOriginY = (self.bounds.height/2) - (titleTextField?.bounds.height)!/2
+            titleTextField?.frame = CGRect(x: (titleTextField?.frame.origin.x)!,
+                                           y: newOriginY,
+                                           width: (titleTextField?.bounds.width)!,
+                                           height: (titleTextField?.bounds.height)!)
+        } else {
+            let distanceBetweenFields = self.bounds.height * 0.1 // 10% from height
+            
+            let newFrameTitleField =
+                CGRect(x: (titleTextField?.frame.origin.x)!,
+                       y: (self.bounds.height/2) + ((titleTextField?.bounds.height)!+(subtitleTextField?.bounds.height)!+distanceBetweenFields)/2 - (titleTextField?.bounds.height)!,
+                       width: (titleTextField?.bounds.width)!,
+                       height: (titleTextField?.bounds.height)!)
+            
+            let newFrameSubtitleField =
+                CGRect(x: (subtitleTextField?.frame.origin.x)!,
+                       y: (self.bounds.height/2) - ((titleTextField?.bounds.height)!+(subtitleTextField?.bounds.height)!+distanceBetweenFields)/2,
+                       width: (subtitleTextField?.bounds.width)!,
+                       height: (subtitleTextField?.bounds.height)!)
+            
+            titleTextField?.frame = newFrameTitleField
+            subtitleTextField?.frame = newFrameSubtitleField
+        }
+    }
+    
+    func imageHiddenLayout() {
+        if (backgroundImageView?.isHidden)! {
+            titleTextField?.frame = CGRect(x: self.bounds.origin.x,
+                                           y: (titleTextField?.frame.origin.y)!,
+                                           width: self.bounds.width,
+                                           height: (titleTextField?.bounds.height)!)
+            subtitleTextField?.frame = CGRect(x: self.bounds.origin.x,
+                                              y: (subtitleTextField?.frame.origin.y)!,
+                                              width: self.bounds.width,
+                                              height: (subtitleTextField?.bounds.height)!)
+        } else {
+            let newOriginX = (backgroundImageView?.frame.origin.x)!+(backgroundImageView?.frame.width)!
+            titleTextField?.frame = CGRect(x: newOriginX,
+                                           y: (titleTextField?.frame.origin.y)!,
+                                           width: self.bounds.width-newOriginX,
+                                           height: (titleTextField?.bounds.height)!)
+            subtitleTextField?.frame = CGRect(x: newOriginX,
+                                              y: (subtitleTextField?.frame.origin.y)!,
+                                              width: self.bounds.width-newOriginX,
+                                              height: (subtitleTextField?.bounds.height)!)
+        }
+    }
+    
+    func setAllElements() -> Bool {
+        if backgroundImageView == nil || titleTextField == nil || subtitleTextField == nil {
+            for subview in self.subviews {
+                if subview is BackgroundImageView && backgroundImageView == nil {
+                    backgroundImageView = subview as? BackgroundImageView
+                }
+                if subview is TitleTextField && titleTextField == nil {
+                    titleTextField = subview as? TitleTextField
+                }
+                if subview is SubtitleTextField && subtitleTextField == nil {
+                    subtitleTextField = subview as? SubtitleTextField
+                }
+            }
+            return false
+        } else {
+            return true
         }
     }
 }

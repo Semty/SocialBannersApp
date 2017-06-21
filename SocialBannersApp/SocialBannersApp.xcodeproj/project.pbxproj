@@ -54,6 +54,9 @@
 		D5DB16E81EF97CA400B4E390 /* FontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB16E71EF97CA400B4E390 /* FontModel.swift */; };
 		D5DB16EB1EF983AE00B4E390 /* FontNameCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB16E91EF983AE00B4E390 /* FontNameCollectionItem.swift */; };
 		D5DB16EC1EF983AE00B4E390 /* FontNameCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5DB16EA1EF983AE00B4E390 /* FontNameCollectionItem.xib */; };
+		D5DB172B1EFAE0FF00B4E390 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB172A1EFAE0FF00B4E390 /* Extensions.swift */; };
+		D5DB172D1EFAE32000B4E390 /* TitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB172C1EFAE32000B4E390 /* TitleTextField.swift */; };
+		D5DB172F1EFAE33100B4E390 /* SubtitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB172E1EFAE33100B4E390 /* SubtitleTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +134,9 @@
 		D5DB16E71EF97CA400B4E390 /* FontModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontModel.swift; sourceTree = "<group>"; };
 		D5DB16E91EF983AE00B4E390 /* FontNameCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontNameCollectionItem.swift; sourceTree = "<group>"; };
 		D5DB16EA1EF983AE00B4E390 /* FontNameCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontNameCollectionItem.xib; sourceTree = "<group>"; };
+		D5DB172A1EFAE0FF00B4E390 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D5DB172C1EFAE32000B4E390 /* TitleTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTextField.swift; sourceTree = "<group>"; };
+		D5DB172E1EFAE33100B4E390 /* SubtitleTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTextField.swift; sourceTree = "<group>"; };
 		E1A8B061E5DC1CAB0B19887E /* Pods-SocialBannersAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppTests/Pods-SocialBannersAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E65B9E26F5AE33BDE9ECEB2E /* Pods-SocialBannersAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialBannersAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialBannersAppUITests/Pods-SocialBannersAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				D500651E1EED4AFB00FDEB35 /* IconLabel.swift */,
+				D5DB172C1EFAE32000B4E390 /* TitleTextField.swift */,
+				D5DB172E1EFAE33100B4E390 /* SubtitleTextField.swift */,
 			);
 			name = Labels;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 				D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */,
 				D5DB16E41EF97B5400B4E390 /* xib's */,
 				D50065201EEFED9B00FDEB35 /* Model */,
+				D5DB172A1EFAE0FF00B4E390 /* Extensions.swift */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
 				D58A11121EC879EB00B708F9 /* Info.plist */,
@@ -670,6 +679,7 @@
 				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
 				D5BA653E1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift in Sources */,
 				D50065481EF6DA5600FDEB35 /* BannerModel.swift in Sources */,
+				D5DB172B1EFAE0FF00B4E390 /* Extensions.swift in Sources */,
 				D500652B1EEFFF2800FDEB35 /* ImagesBannerScrollView.swift in Sources */,
 				D5BA65561EE2CB1200AD40A6 /* SubstrateHeaderView.swift in Sources */,
 				D50065421EF684C400FDEB35 /* ColorModel.swift in Sources */,
@@ -679,6 +689,7 @@
 				D5DB16E81EF97CA400B4E390 /* FontModel.swift in Sources */,
 				D50065461EF6D71800FDEB35 /* SelectBackgroundColorController.swift in Sources */,
 				D50065381EF5C0A200FDEB35 /* SaveButton.swift in Sources */,
+				D5DB172F1EFAE33100B4E390 /* SubtitleTextField.swift in Sources */,
 				D5BA65451EE1852200AD40A6 /* BackToBannersButton.swift in Sources */,
 				D5DB16E61EF97BAE00B4E390 /* SelectFontNameController.swift in Sources */,
 				D500653A1EF5D01B00FDEB35 /* BannersIconsBezierPaths.swift in Sources */,
@@ -687,6 +698,7 @@
 				D5BA65581EE3196600AD40A6 /* NewBannerView.swift in Sources */,
 				D50065221EEFEE3500FDEB35 /* IconsCollectionModel.swift in Sources */,
 				D50065361EF5B49200FDEB35 /* ChangeButton.swift in Sources */,
+				D5DB172D1EFAE32000B4E390 /* TitleTextField.swift in Sources */,
 				D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */,
 				D5BA65541EE1A62A00AD40A6 /* GradientView.swift in Sources */,
 				D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */,

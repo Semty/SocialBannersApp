@@ -1015,8 +1015,8 @@
                                                             <rect key="frame" x="20" y="32" width="32" height="32"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         </customView>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-d4-5rG">
-                                                            <rect key="frame" x="52" y="33" width="192" height="31"/>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-d4-5rG" customClass="TitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
+                                                            <rect key="frame" x="52" y="33" width="192" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="O7m-gU-wMl">
                                                                 <font key="font" size="18" name="AvenirNext-Medium"/>
@@ -1024,8 +1024,8 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toy-uN-nWC">
-                                                            <rect key="frame" x="52" y="6" width="192" height="27"/>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toy-uN-nWC" customClass="SubtitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
+                                                            <rect key="frame" x="52" y="6" width="192" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="qCb-QG-bEs">
                                                                 <font key="font" size="16" name="AvenirNext-Medium"/>

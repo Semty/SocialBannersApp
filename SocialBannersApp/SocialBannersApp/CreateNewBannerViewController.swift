@@ -40,8 +40,8 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
 // MARK: - New Banner Elements
     
-    @IBOutlet weak var titleForNewBanner: NSTextField!
-    @IBOutlet weak var subtitleForNewBanner: NSTextField!
+    @IBOutlet weak var titleForNewBanner: TitleTextField!
+    @IBOutlet weak var subtitleForNewBanner: SubtitleTextField!
     @IBOutlet weak var imageForNewBannerView: BackgroundImageView!
     
 // MARK: - Private variables
@@ -95,6 +95,11 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                                                      andColor: newBannerModel.contentColor)
         } else {
             imageForNewBannerView.isHidden = true
+            newBannerView.layout()
+        }
+        if subtitleForNewBanner.stringValue.characters.count == 0 {
+            subtitleForNewBanner.isHidden = true
+            newBannerView.layout()
         }
     }
     
@@ -156,6 +161,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             }
             
             imageForNewBannerView.layer?.setNeedsDisplay()
+            newBannerView.layout()
             newBannerModel.iconImage = ImageIndex(rawValue: indexPath.item)!
         }
     }
@@ -193,24 +199,12 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             }
         } else if enterTextField == enterSubtitleField {
             if enterTextField.stringValue.characters.count > 0 {
-                let newTitleOrigin =
-                    CGPoint(x: titleForNewBanner.frame.origin.x,
-                            y: 46)
-                titleForNewBanner.setFrameOrigin(newTitleOrigin)
-                let newSubtitleOrigin =
-                    CGPoint(x: subtitleForNewBanner.frame.origin.x,
-                            y: 18)
-                subtitleForNewBanner.setFrameOrigin(newSubtitleOrigin)
+                subtitleForNewBanner.isHidden = false
             } else {
-                let newTitleOrigin =
-                    CGPoint(x: titleForNewBanner.frame.origin.x,
-                            y: 33)
-                titleForNewBanner.setFrameOrigin(newTitleOrigin)
-                let newSubtitleOrigin =
-                    CGPoint(x: subtitleForNewBanner.frame.origin.x,
-                            y: 6)
-                subtitleForNewBanner.setFrameOrigin(newSubtitleOrigin)
+                subtitleForNewBanner.isHidden = true
             }
+            
+            newBannerView.layout()
  
             if enterSubtitleField.stringValue.characters.count <= 30 {
                 self.subtitleForNewBanner.stringValue = enterTextField.stringValue
