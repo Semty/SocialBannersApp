@@ -44,6 +44,14 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBOutlet weak var subtitleForNewBanner: SubtitleTextField!
     @IBOutlet weak var imageForNewBannerView: BackgroundImageView!
     
+// MARK: - Final New Banner For Saving in Full HD
+    
+    @IBOutlet weak var finalNewBanner: NewBannerView!
+    
+    @IBOutlet weak var finalBackgroundImage: BackgroundImageView!
+    @IBOutlet weak var finalTitleLabel: TitleTextField!
+    @IBOutlet weak var finalSubtitleLabel: SubtitleTextField!
+    
 // MARK: - Private variables
     
     private var topScrollPoint      = CGPoint.zero  // default (it's not top!)
@@ -182,6 +190,11 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         self.dismiss(sender)
         
         bannersVC.resizeWindow(withCreateBannerSize: bannersVC.view.bounds)
+    }
+    
+    @IBAction func saveNewBanner(_ sender: Any) {
+        prepareForSaveFinalNewBanner()
+        saveFinalNewBanner()
     }
     
     override func controlTextDidChange(_ obj: Notification) {
@@ -341,6 +354,79 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         self.subtitleForNewBanner.textColor = color
         self.imageForNewBannerView.setBackgroundImage(withIndex: newBannerModel.iconImage.rawValue,
                                                       andColor: color)
+    }
+    
+// MARK: - Saving Final New Banner
+    
+    func prepareForSaveFinalNewBanner() {
+        
+        if newBannerModel.iconImage == .empty {
+            finalBackgroundImage.isHidden = true
+        } else {
+            finalBackgroundImage.isHidden = false
+            finalBackgroundImage.setBackgroundImage(withIndex: newBannerModel.iconImage.rawValue,
+                                                    andColor: newBannerModel.contentColor)
+        }
+        
+        if subtitleForNewBanner.stringValue.characters.count == 0 {
+            finalSubtitleLabel.isHidden = true
+        } else {
+            finalSubtitleLabel.isHidden = false
+        }
+        
+        finalNewBanner.layout()
+        
+        finalTitleLabel.stringValue = titleForNewBanner.stringValue
+        finalSubtitleLabel.stringValue = subtitleForNewBanner.stringValue
+        
+        finalTitleLabel.font = NSFont(name: newBannerModel.fontType.type.rawValue,
+                                      size: 100)
+        finalSubtitleLabel.font = NSFont(name: newBannerModel.fontType.type.rawValue,
+                                      size: 100)
+        
+        finalTitleLabel.font =
+            self.calculateFont(toFit: self.finalTitleLabel,
+                               withString: self.finalTitleLabel.stringValue as NSString,
+                               minSize: 1,
+                               maxSize: 55)
+        finalSubtitleLabel.font =
+            self.calculateFont(toFit: self.finalSubtitleLabel,
+                               withString: self.finalSubtitleLabel.stringValue as NSString,
+                               minSize: 1,
+                               maxSize: 50)
+        finalTitleLabel.textColor = newBannerModel.contentColor
+        finalSubtitleLabel.textColor = newBannerModel.contentColor
+        
+        finalNewBanner.setBackgroundColor(withColors: newBannerModel.backgroundColor)
+        
+        finalNewBanner.layout()
+        finalNewBanner.layer?.setNeedsDisplay()
+    }
+    
+    func saveFinalNewBanner() {
+        finalNewBanner.isHidden = false
+        let image = finalNewBanner.image()
+        finalNewBanner.removeFromSuperview()
+        
+        // get URL to the the documents directory in the sandbox
+        let documentsUrl = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)[0] as NSURL
+        
+        let fileName = "socialBanner"
+        
+        // add a filename
+        let fileUrl = documentsUrl.appendingPathComponent("\(fileName).png")
+        
+        // write to it
+        
+        if image.savePNG(to: fileUrl!) {
+            print("success")
+        }
+        
+        let bannersVC = self.presenting as! ViewController
+        
+        self.dismiss(nil)
+        
+        bannersVC.resizeWindow(withCreateBannerSize: bannersVC.view.bounds)
     }
     
 }
