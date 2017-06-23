@@ -37,6 +37,15 @@ class NewBannerView: NSView {
     
     func setBackgroundColor(withColors colors: [CGColor]) {
         
+        if gradientLayer.superlayer != nil {
+            let tempLayer = CAGradientLayer()
+            tempLayer.frame = self.bounds
+            gradientLayer.removeFromSuperlayer()
+            gradientLayer = tempLayer
+            gradientLayer.cornerRadius = 6.0
+            self.layer?.insertSublayer(gradientLayer, at: 0)
+        }
+        
         backgroundColors = colors
         gradientLayer.colors = backgroundColors
         

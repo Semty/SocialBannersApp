@@ -44,7 +44,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBOutlet weak var subtitleForNewBanner: SubtitleTextField!
     @IBOutlet weak var imageForNewBannerView: BackgroundImageView!
     
-// MARK: - Final New Banner For Saving in Full HD
+// MARK: - Final New Banner Elements For Saving in Full HD
     
     @IBOutlet weak var finalNewBanner: NewBannerView!
     
@@ -62,7 +62,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
 // MARK: - Public variables
     
     let imageBannerModel = IconsCollectionModel()
-    let newBannerModel = BannerModel()
+    var newBannerModel = BannerModel()
     
 // MARK: - View Did Load
     
@@ -105,10 +105,6 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             imageForNewBannerView.isHidden = true
             newBannerView.layout()
         }
-        if subtitleForNewBanner.stringValue.characters.count == 0 {
-            subtitleForNewBanner.isHidden = true
-            newBannerView.layout()
-        }
     }
     
 // MARK: - View Will Appear
@@ -119,12 +115,18 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         
         self.updateNBFont(withType: newBannerModel.fontType)
         self.updateNBContentColor(withContentColor: newBannerModel.contentColor)
+        self.titleForNewBanner.stringValue = newBannerModel.titleText
+        self.subtitleForNewBanner.stringValue = newBannerModel.subtitleText
         
         self.bgColorLabel.stringValue = newBannerModel.bgColorName
         self.bgColorView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
         
         self.contentColorLabel.stringValue = newBannerModel.contentColorName
         self.contentColorView.layer?.backgroundColor = newBannerModel.contentColor.cgColor
+        if subtitleForNewBanner.stringValue.characters.count == 0 {
+            subtitleForNewBanner.isHidden = true
+            newBannerView.layout()
+        }
     }
     
 // MARK: - NSCollectionViewDataSource
@@ -208,7 +210,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                 self.calculateFont(toFit: self.titleForNewBanner,
                                    withString: self.titleForNewBanner.stringValue as NSString,
                                    minSize: 1,
-                                   maxSize: 15)
+                                   maxSize: 14)
             }
         } else if enterTextField == enterSubtitleField {
             if enterTextField.stringValue.characters.count > 0 {
@@ -225,7 +227,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                     self.calculateFont(toFit: self.subtitleForNewBanner,
                                        withString: self.subtitleForNewBanner.stringValue as NSString,
                                        minSize: 1,
-                                       maxSize: 14)
+                                       maxSize: 13)
             }
         }
     
@@ -257,7 +259,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         let visibleRect = scrollView.contentView.documentVisibleRect
         let currentScrollPosition = visibleRect.origin
         let scrollYOffset = currentScrollPosition.y - topScrollPoint.y
-        print("scrollYOffset = \(scrollYOffset)")
+        //print("scrollYOffset = \(scrollYOffset)")
         
         // Pull Up Header
         if currentScrollPosition.y <= topScrollPoint.y {
@@ -298,19 +300,6 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         substrateHeaderView.setFrameOrigin(NSPoint.init(x: substrateStartFrame.origin.x,
                                                         y: substrateStartFrame.origin.y - scrollYOffset))
  
-    }
-    
-    func calculateFont(toFit textField: NSTextField, withString string: NSString, minSize min: Int, maxSize max: Int) -> NSFont {
-        for i in min...max {
-            var attr: [String: Any] = [:] as Dictionary
-            attr[NSFontSizeAttribute] = NSFont(name: textField.font!.fontName, size: CGFloat(i))!
-            let strSize = string.size(withAttributes: [NSFontAttributeName: NSFont.systemFont(ofSize: CGFloat(i))])
-            let linesNumber = Int(textField.bounds.height/strSize.height)
-            if strSize.width/CGFloat(linesNumber) > textField.bounds.width {
-                return (i == min ? NSFont(name: "\(textField.font!.fontName)", size: CGFloat(min)) : NSFont(name: "\(textField.font!.fontName)", size: CGFloat(i-1)))!
-            }
-        }
-        return NSFont(name: "\(textField.font!.fontName)", size: CGFloat(max))!
     }
 
 // MARK: - Configure CollectionView
@@ -368,9 +357,12 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                                                     andColor: newBannerModel.contentColor)
         }
         
+        self.newBannerModel.titleText = self.titleForNewBanner.stringValue
+        
         if subtitleForNewBanner.stringValue.characters.count == 0 {
             finalSubtitleLabel.isHidden = true
         } else {
+            self.newBannerModel.subtitleText = self.subtitleForNewBanner.stringValue
             finalSubtitleLabel.isHidden = false
         }
         
@@ -414,7 +406,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         let fileName = "socialBanner"
         
         // add a filename
-        let fileUrl = documentsUrl.appendingPathComponent("\(fileName).png")
+        let fileUrl = documentsUrl.appendingPathComponent("\(fileName)_\(saveModelBanner()).png")
         
         // write to it
         
@@ -423,12 +415,18 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         }
         
         let bannersVC = self.presenting as! ViewController
+        bannersVC.bannersCollection.reloadData()
         
         self.dismiss(nil)
         
         bannersVC.resizeWindow(withCreateBannerSize: bannersVC.view.bounds)
     }
     
+    func saveModelBanner() -> Int {
+        BannersDefaults.save(banner: newBannerModel,
+                             forKey: .banners)
+        return BannersDefaults.loadBanners(forKey: .banners).count - 1
+    }
 }
 
 

@@ -28,6 +28,9 @@
 		D50065501EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D500654E1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib */; };
 		D50065531EF8560D00FDEB35 /* BGColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065521EF8560D00FDEB35 /* BGColorView.swift */; };
 		D50065551EF8751000FDEB35 /* ContentColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50065541EF8751000FDEB35 /* ContentColorView.swift */; };
+		D50F39EF1EFD18F0002521D9 /* BannersDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F39EE1EFD18F0002521D9 /* BannersDefaults.swift */; };
+		D50F39F31EFD1F2A002521D9 /* PreviewBannerCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50F39F11EFD1F2A002521D9 /* PreviewBannerCollectionItem.swift */; };
+		D50F39F41EFD1F2A002521D9 /* PreviewBannerCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D50F39F21EFD1F2A002521D9 /* PreviewBannerCollectionItem.xib */; };
 		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
 		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
 		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
@@ -102,6 +105,9 @@
 		D500654E1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BgColorBannerCollectionItem.xib; sourceTree = "<group>"; };
 		D50065521EF8560D00FDEB35 /* BGColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BGColorView.swift; sourceTree = "<group>"; };
 		D50065541EF8751000FDEB35 /* ContentColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentColorView.swift; sourceTree = "<group>"; };
+		D50F39EE1EFD18F0002521D9 /* BannersDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannersDefaults.swift; sourceTree = "<group>"; };
+		D50F39F11EFD1F2A002521D9 /* PreviewBannerCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewBannerCollectionItem.swift; sourceTree = "<group>"; };
+		D50F39F21EFD1F2A002521D9 /* PreviewBannerCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewBannerCollectionItem.xib; sourceTree = "<group>"; };
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +272,14 @@
 			name = ChangeBGColor;
 			sourceTree = "<group>";
 		};
+		D50F39F01EFD18F9002521D9 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				D50F39EE1EFD18F0002521D9 /* BannersDefaults.swift */,
+			);
+			name = UserDefaults;
+			sourceTree = "<group>";
+		};
 		D58A10FD1EC879EA00B708F9 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +310,7 @@
 				D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */,
 				D5DB16E41EF97B5400B4E390 /* xib's */,
 				D50065201EEFED9B00FDEB35 /* Model */,
+				D50F39F01EFD18F9002521D9 /* UserDefaults */,
 				D5DB172A1EFAE0FF00B4E390 /* Extensions.swift */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
@@ -369,6 +384,8 @@
 		D5DB16E41EF97B5400B4E390 /* xib's */ = {
 			isa = PBXGroup;
 			children = (
+				D50F39F11EFD1F2A002521D9 /* PreviewBannerCollectionItem.swift */,
+				D50F39F21EFD1F2A002521D9 /* PreviewBannerCollectionItem.xib */,
 				D5DB16E91EF983AE00B4E390 /* FontNameCollectionItem.swift */,
 				D5DB16EA1EF983AE00B4E390 /* FontNameCollectionItem.xib */,
 				D5DB16E01EF917EE00B4E390 /* ContentColorBannerCollectionItem.swift */,
@@ -500,6 +517,7 @@
 				D5DB16EC1EF983AE00B4E390 /* FontNameCollectionItem.xib in Resources */,
 				D58A110E1EC879EB00B708F9 /* Assets.xcassets in Resources */,
 				D50065501EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.xib in Resources */,
+				D50F39F41EFD1F2A002521D9 /* PreviewBannerCollectionItem.xib in Resources */,
 				D50065281EEFF92200FDEB35 /* ImageBannerCollectionItem.xib in Resources */,
 				D5DB16E31EF917EE00B4E390 /* ContentColorBannerCollectionItem.xib in Resources */,
 				D58A11111EC879EB00B708F9 /* Main.storyboard in Resources */,
@@ -666,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D500652D1EF12E9A00FDEB35 /* TypeTitleForNewBannerView.swift in Sources */,
+				D50F39EF1EFD18F0002521D9 /* BannersDefaults.swift in Sources */,
 				D500654F1EF6EEEA00FDEB35 /* BgColorBannerCollectionItem.swift in Sources */,
 				D5BA654B1EE196B500AD40A6 /* WhiteSquadPartView.swift in Sources */,
 				D5BA654D1EE1A2BA00AD40A6 /* WhiteRoundedView.swift in Sources */,
@@ -688,6 +707,7 @@
 				D50065271EEFF92200FDEB35 /* ImageBannerCollectionItem.swift in Sources */,
 				D5DB16E81EF97CA400B4E390 /* FontModel.swift in Sources */,
 				D50065461EF6D71800FDEB35 /* SelectBackgroundColorController.swift in Sources */,
+				D50F39F31EFD1F2A002521D9 /* PreviewBannerCollectionItem.swift in Sources */,
 				D50065381EF5C0A200FDEB35 /* SaveButton.swift in Sources */,
 				D5DB172F1EFAE33100B4E390 /* SubtitleTextField.swift in Sources */,
 				D5BA65451EE1852200AD40A6 /* BackToBannersButton.swift in Sources */,

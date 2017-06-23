@@ -65,3 +65,17 @@ extension NSImage {
         
     }
 }
+extension NSObject {
+    func calculateFont(toFit textField: NSTextField, withString string: NSString, minSize min: Int, maxSize max: Int) -> NSFont {
+        for i in min...max {
+            var attr: [String: Any] = [:] as Dictionary
+            attr[NSFontSizeAttribute] = NSFont(name: textField.font!.fontName, size: CGFloat(i))!
+            let strSize = string.size(withAttributes: [NSFontAttributeName: NSFont.systemFont(ofSize: CGFloat(i))])
+            let linesNumber = Int(textField.bounds.height/strSize.height)
+            if strSize.width/CGFloat(linesNumber) > textField.bounds.width {
+                return (i == min ? NSFont(name: "\(textField.font!.fontName)", size: CGFloat(min)) : NSFont(name: "\(textField.font!.fontName)", size: CGFloat(i-1)))!
+            }
+        }
+        return NSFont(name: "\(textField.font!.fontName)", size: CGFloat(max))!
+    }
+}

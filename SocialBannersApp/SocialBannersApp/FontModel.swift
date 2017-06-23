@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class FontModel: NSObject {
+class FontModel: NSObject{
 
     var type: FontString
     
