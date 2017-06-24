@@ -15,7 +15,6 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     @IBOutlet weak var addBannerButton: AddBannerButton!
     
     @IBOutlet weak var myBannersLabel: NSTextField!
-    @IBOutlet weak var lastBannersLabel: NSTextField!
     
     @IBOutlet weak var bannersScrollView: NSScrollView!
     @IBOutlet weak var bannersCollection: NSCollectionView!
@@ -38,8 +37,6 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        
-        lastBannersText()
         
         self.window.backgroundColor = NSColor(calibratedRed: 0.96470588,
                                               green: 0.96470588,
@@ -144,21 +141,9 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
             
             addBannerButton.animator().alphaValue = alpha
             myBannersLabel.animator().alphaValue = alpha
-            lastBannersLabel.animator().alphaValue = alpha
             bannersCollection.animator().alphaValue = alpha
             
         }, completionHandler: nil)
-    }
-    
-    func lastBannersText() {
-        let bannersModel = BannersDefaults.loadBanners(forKey: .banners)
-        
-        if bannersModel.count == 0 {
-            lastBannersLabel.stringValue = "You haven't made banner yet"
-        } else {
-            lastBannersLabel.stringValue = "You have \(bannersModel.count) preview(s)"
-        }
-        
     }
 
 // MARK: - Actions

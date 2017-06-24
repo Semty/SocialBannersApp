@@ -26,7 +26,7 @@ class SaveButton: NSButton {
         let titleFont = NSFont(name: "Avenir Next Bold",
                                size: 14)
         
-        self.attributedTitle = NSAttributedString(string: "Save",
+        self.attributedTitle = NSAttributedString(string: Translation.saveString,
                                                   attributes: [NSFontAttributeName: titleFont!,NSForegroundColorAttributeName: titleColor, NSParagraphStyleAttributeName: pstyle])
         
         // Drawing code here.

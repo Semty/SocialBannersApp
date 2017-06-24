@@ -31,6 +31,7 @@
 		D56E46101EDAC4AB0062349F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E460F1EDAC4AB0062349F /* TitleView.swift */; };
 		D56E46121EDB19210062349F /* AddBannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46111EDB19210062349F /* AddBannerButton.swift */; };
 		D56E46141EDC4E4C0062349F /* CreateNewBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */; };
+		D58987CD1EFE9D5000C8E029 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58987CC1EFE9D5000C8E029 /* Translation.swift */; };
 		D58A110A1EC879EA00B708F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A11091EC879EA00B708F9 /* AppDelegate.swift */; };
 		D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A110B1EC879EA00B708F9 /* ViewController.swift */; };
 		D58A110E1EC879EB00B708F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58A110D1EC879EB00B708F9 /* Assets.xcassets */; };
@@ -101,6 +102,9 @@
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
+		D58987CB1EFE989B00C8E029 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		D58987CC1EFE9D5000C8E029 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		D58987CE1EFEA58E00C8E029 /* SocialBannersApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialBannersApp.entitlements; sourceTree = "<group>"; };
 		D58A11061EC879EA00B708F9 /* SocialBannersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialBannersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58A11091EC879EA00B708F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D58A110B1EC879EA00B708F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 		D58A11081EC879EA00B708F9 /* SocialBannersApp */ = {
 			isa = PBXGroup;
 			children = (
+				D58987CE1EFEA58E00C8E029 /* SocialBannersApp.entitlements */,
 				D58A11091EC879EA00B708F9 /* AppDelegate.swift */,
 				D500654C1EF6ED5F00FDEB35 /* Controllers */,
 				D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */,
@@ -272,6 +277,7 @@
 				D50065201EEFED9B00FDEB35 /* Model */,
 				D50F39F01EFD18F9002521D9 /* UserDefaults */,
 				D5DB172A1EFAE0FF00B4E390 /* Extensions.swift */,
+				D58987CC1EFE9D5000C8E029 /* Translation.swift */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
 				D58A11121EC879EB00B708F9 /* Info.plist */,
@@ -427,6 +433,11 @@
 					D58A11051EC879EA00B708F9 = {
 						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					D58A11161EC879EB00B708F9 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -507,6 +518,7 @@
 				D5DB16DF1EF915A900B4E390 /* SelectContentColorController.swift in Sources */,
 				D5BA65471EE1887200AD40A6 /* BaseElementsBezierPaths.swift in Sources */,
 				D50065531EF8560D00FDEB35 /* BGColorView.swift in Sources */,
+				D58987CD1EFE9D5000C8E029 /* Translation.swift in Sources */,
 				D50065551EF8751000FDEB35 /* ContentColorView.swift in Sources */,
 				D58A110C1EC879EA00B708F9 /* ViewController.swift in Sources */,
 				D5BA653E1EE15E7400AD40A6 /* CrtBnnrBgScrollView.swift in Sources */,
@@ -576,6 +588,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D58A11101EC879EB00B708F9 /* Base */,
+				D58987CB1EFE989B00C8E029 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -587,6 +600,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -637,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -679,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialBannersApp/SocialBannersApp.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SocialBannersApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -693,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialBannersApp/SocialBannersApp.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SocialBannersApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

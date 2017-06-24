@@ -26,7 +26,7 @@ class ChangeButton: NSButton {
         let titleFont = NSFont(name: "Avenir Next Medium",
                                size: 10)
         
-        self.attributedTitle = NSAttributedString(string: "Change",
+        self.attributedTitle = NSAttributedString(string: Translation.changeString,
                                                   attributes: [NSFontAttributeName: titleFont!,NSForegroundColorAttributeName: titleColor, NSParagraphStyleAttributeName: pstyle])
         
         // Drawing code here.

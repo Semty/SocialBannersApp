@@ -30,6 +30,10 @@ class BGColorView: NSView {
         
         backgroundColors = colors
         gradientLayer.colors = backgroundColors
+        gradientLayer.startPoint = CGPoint(x: 0,
+                                           y: 1)
+        gradientLayer.endPoint = CGPoint(x: 1.0,
+                                         y: 0.0)
         
         if gradientLayer.superlayer == nil {
             self.layer?.addSublayer(gradientLayer)

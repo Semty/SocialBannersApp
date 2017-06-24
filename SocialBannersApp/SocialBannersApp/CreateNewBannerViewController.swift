@@ -204,7 +204,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
     @IBAction func saveNewBanner(_ sender: Any) {
         prepareForSaveFinalNewBanner()
-        saveFinalNewBanner()
+        allowFolderForSaving()
     }
     
     override func controlTextDidChange(_ obj: Notification) {
@@ -317,7 +317,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         flowLayout.itemSize = NSSize(width: 40.0, height: 40.0)
         flowLayout.sectionInset = EdgeInsets(top: 5.0, left: 159.0, bottom: 5.0, right: 159.0)
         //flowLayout.minimumInteritemSpacing = 10.0
-        //flowLayout.minimumLineSpacing = 20.0
+        flowLayout.minimumLineSpacing = 20.0
         flowLayout.scrollDirection = .horizontal
         
         imagesCollectionView.collectionViewLayout = flowLayout
@@ -404,38 +404,45 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         finalNewBanner.layer?.setNeedsDisplay()
     }
     
-    func saveFinalNewBanner() {
+    func saveFinalNewBanner(withURL fileUrl: URL) {
         finalNewBanner.isHidden = false
         let image = finalNewBanner.image()
         finalNewBanner.removeFromSuperview()
         
-        // get URL to the the documents directory in the sandbox
-        let documentsUrl = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask)[0] as NSURL
-        
-        let fileName = "socialBanner"
-        
-        // add a filename
-        let fileUrl = documentsUrl.appendingPathComponent("\(fileName)_\(saveModelBanner()).png")
-        
         // write to it
         
-        if image.savePNG(to: fileUrl!) {
-            print("success")
+        if image.savePNG(to: fileUrl) {
+            saveModelBanner()
         }
         
         let bannersVC = self.presenting as! ViewController
         bannersVC.bannersCollection.reloadData()
-        bannersVC.lastBannersText()
         
         self.dismiss(nil)
         
         bannersVC.resizeWindow(withCreateBannerSize: bannersVC.view.bounds)
     }
     
-    func saveModelBanner() -> Int {
+    func saveModelBanner() {
         BannersDefaults.save(banner: newBannerModel,
                              forKey: .banners)
-        return (BannersDefaults.loadBanners(forKey: .banners).first?.saveNumber)!
+    }
+    
+    func allowFolderForSaving()
+    {
+        let savePanel = NSSavePanel()
+        savePanel.canCreateDirectories = true
+        savePanel.allowedFileTypes = ["png"]
+        savePanel.begin
+            { (result) -> Void in
+                if result == NSFileHandlingPanelOKButton
+                {
+                    let fileUrl = savePanel.url
+                    if let rightURL = fileUrl {
+                        self.saveFinalNewBanner(withURL: rightURL)
+                    }
+                }
+        }
     }
 }
 
