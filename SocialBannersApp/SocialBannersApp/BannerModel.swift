@@ -18,12 +18,13 @@ class BannerModel: NSObject, NSCoding {
     var titleText = ""
     var subtitleText = ""
     var fontType = FontModel(type: .avenirNextMedium)
+    var saveNumber = 0
     
     override init() {
         //super.init()
     }
     
-    init(withIconImage iconImage: ImageIndex, contentColor: NSColor, backgroundColor: [CGColor], bgColorName: String, contentColorName: String, titleText: String, subtitleText: String, fontType: FontModel) {
+    init(withIconImage iconImage: ImageIndex, contentColor: NSColor, backgroundColor: [CGColor], bgColorName: String, contentColorName: String, titleText: String, subtitleText: String, fontType: FontModel, saveNumber: Int) {
         self.iconImage = iconImage
         self.contentColor = contentColor
         self.backgroundColor = backgroundColor
@@ -32,6 +33,7 @@ class BannerModel: NSObject, NSCoding {
         self.titleText = titleText
         self.subtitleText = subtitleText
         self.fontType = fontType
+        self.saveNumber = saveNumber
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -54,6 +56,8 @@ class BannerModel: NSObject, NSCoding {
         let fontTypeString = aDecoder.decodeObject(forKey: "fontType") as! String
         let fontType = FontModel(type: FontString(rawValue: fontTypeString)!)
         
+        let saveNumber = aDecoder.decodeInteger(forKey: "saveNumber")
+        
         self.init(withIconImage: iconImage!,
                   contentColor: contentColor,
                   backgroundColor: backgroundColor,
@@ -61,7 +65,8 @@ class BannerModel: NSObject, NSCoding {
                   contentColorName: contentColorName,
                   titleText: titleText,
                   subtitleText: subtitleText,
-                  fontType: fontType)
+                  fontType: fontType,
+                  saveNumber: saveNumber)
     }
     
     
@@ -82,7 +87,7 @@ class BannerModel: NSObject, NSCoding {
         let fontTypeString = fontType.type.rawValue
         
         aCoder.encode(fontTypeString, forKey: "fontType")
-        
+        aCoder.encode(saveNumber, forKey: "saveNumber")
     }
     
 }

@@ -24,6 +24,7 @@ enum FontString: String {
     case avenirNexRegular = "Avenir Next Regular"
     case avenirNextCondensedMedium = "Avenir Next Condensed Medium"
     case avenirNextCondensedBold = "Avenir Next Condensed Bold"
+    case timesNewRoman = "Times New Roman"
     case georgia = "Georgia"
     case georgiaBold = "Georgia Bold"
     case gillSans = "Gill Sans"

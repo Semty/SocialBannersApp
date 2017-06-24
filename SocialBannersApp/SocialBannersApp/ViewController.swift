@@ -13,6 +13,7 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
 // MARK: - IBOutlet's
     
     @IBOutlet weak var addBannerButton: AddBannerButton!
+    
     @IBOutlet weak var myBannersLabel: NSTextField!
     @IBOutlet weak var lastBannersLabel: NSTextField!
     
@@ -133,7 +134,7 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     
     func hideAllElements(isHidden: Bool) {
         
-        let alpha: CGFloat = isHidden ? 0 : 1
+        let alpha: CGFloat = isHidden ? 0.0 : 1.0
         
         NSAnimationContext.runAnimationGroup({ (content) in
             addBannerButton.alphaValue = alpha

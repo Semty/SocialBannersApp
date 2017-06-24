@@ -425,7 +425,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     func saveModelBanner() -> Int {
         BannersDefaults.save(banner: newBannerModel,
                              forKey: .banners)
-        return BannersDefaults.loadBanners(forKey: .banners).count - 1
+        return (BannersDefaults.loadBanners(forKey: .banners).first?.saveNumber)!
     }
 }
 

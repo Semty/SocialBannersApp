@@ -12,18 +12,21 @@ class BannersDefaults {
 
     static func save(banner bannerObject: BannerModel, forKey key: BannersKey) {
         
-        let archiveData = NSKeyedArchiver.archivedData(withRootObject: bannerObject)
-        
         if UserDefaults.standard.array(forKey: key.rawValue) == nil {
+            let archiveData = NSKeyedArchiver.archivedData(withRootObject: bannerObject)
             
             UserDefaults.standard.setValue([archiveData],
                                            forKey: key.rawValue)
         } else {
             var banners = UserDefaults.standard.array(forKey: key.rawValue) as! [Data]
             
+            bannerObject.saveNumber = (loadBanners(forKey: .banners).first?.saveNumber)! + 1
+            
             if banners.count == 18 {
                 banners.removeLast()
             }
+            
+            let archiveData = NSKeyedArchiver.archivedData(withRootObject: bannerObject)
             
             banners.insert(archiveData, at: 0)
             UserDefaults.standard.setValue(banners,

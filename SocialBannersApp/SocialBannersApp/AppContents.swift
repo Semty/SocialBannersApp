@@ -18,6 +18,7 @@ class AppContents: NSObject {
             FontModel(type: .avenirNexRegular),
             FontModel(type: .avenirNextCondensedMedium),
             FontModel(type: .avenirNextCondensedBold),
+            FontModel(type: .timesNewRoman),
             FontModel(type: .georgia),
             FontModel(type: .georgiaBold),
             FontModel(type: .gillSans),
