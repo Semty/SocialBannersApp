@@ -58,12 +58,12 @@ class PreviewBannerCollectionItem: NSCollectionViewItem {
             self.calculateFont(toFit: self.newBannerTitleLabel,
                                withString: self.newBannerTitleLabel.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 13)
+                               maxSize: 18)
         newBannerSubtitleLabel.font =
             self.calculateFont(toFit: self.newBannerSubtitleLabel,
                                withString: self.newBannerSubtitleLabel.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 11)
+                               maxSize: 13)
         
         newBannerTitleLabel.textColor = newBannerModel.contentColor
         newBannerSubtitleLabel.textColor = newBannerModel.contentColor

@@ -24,10 +24,12 @@ class ChangeButton: NSButton {
         let pstyle = NSMutableParagraphStyle()
         pstyle.alignment = .center
         let titleFont = NSFont(name: "Avenir Next Medium",
-                               size: 10)
+                               size: 12)
         
         self.attributedTitle = NSAttributedString(string: Translation.changeString,
                                                   attributes: [NSFontAttributeName: titleFont!,NSForegroundColorAttributeName: titleColor, NSParagraphStyleAttributeName: pstyle])
+        
+        NSView.setShadowFor(view: self)
         
         // Drawing code here.
     }

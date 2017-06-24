@@ -42,7 +42,7 @@ class NewBannerView: NSView {
             tempLayer.frame = self.bounds
             gradientLayer.removeFromSuperlayer()
             gradientLayer = tempLayer
-            gradientLayer.cornerRadius = 6.0
+            gradientLayer.cornerRadius = self.bounds.height*0.07
             self.layer?.insertSublayer(gradientLayer, at: 0)
         }
         
@@ -77,7 +77,7 @@ class NewBannerView: NSView {
                                            width: (titleTextField?.bounds.width)!,
                                            height: (titleTextField?.bounds.height)!)
         } else {
-            let distanceBetweenFields = self.bounds.height * 0.1 // 10% from height
+            let distanceBetweenFields: CGFloat = 0.0 // 0% from height
             
             let newFrameTitleField =
                 CGRect(x: (titleTextField?.frame.origin.x)!,
@@ -97,25 +97,34 @@ class NewBannerView: NSView {
     }
     
     func imageHiddenLayout() {
+        let heightTitleLabel = self.bounds.height*0.22
+        let heightSubtitleLabel = self.bounds.height*0.16
+        
+        backgroundImageView?.frame =
+        CGRect(x: 0.08 * self.bounds.width,
+               y: 0.34 * self.bounds.height,
+               width: 0.33 * self.bounds.height,
+               height: 0.33 * self.bounds.height)
+        
         if (backgroundImageView?.isHidden)! {
             titleTextField?.frame = CGRect(x: self.bounds.origin.x,
                                            y: (titleTextField?.frame.origin.y)!,
                                            width: self.bounds.width,
-                                           height: (titleTextField?.bounds.height)!)
+                                           height: heightTitleLabel)
             subtitleTextField?.frame = CGRect(x: self.bounds.origin.x,
                                               y: (subtitleTextField?.frame.origin.y)!,
                                               width: self.bounds.width,
-                                              height: (subtitleTextField?.bounds.height)!)
+                                              height: heightSubtitleLabel)
         } else {
             let newOriginX = (backgroundImageView?.frame.origin.x)!+(backgroundImageView?.frame.width)!
             titleTextField?.frame = CGRect(x: newOriginX,
                                            y: (titleTextField?.frame.origin.y)!,
                                            width: self.bounds.width-newOriginX,
-                                           height: (titleTextField?.bounds.height)!)
+                                           height: heightTitleLabel)
             subtitleTextField?.frame = CGRect(x: newOriginX,
                                               y: (subtitleTextField?.frame.origin.y)!,
                                               width: self.bounds.width-newOriginX,
-                                              height: (subtitleTextField?.bounds.height)!)
+                                              height: heightSubtitleLabel)
         }
     }
     

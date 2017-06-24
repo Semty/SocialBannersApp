@@ -28,7 +28,7 @@ class SaveButton: NSButton {
         
         self.attributedTitle = NSAttributedString(string: Translation.saveString,
                                                   attributes: [NSFontAttributeName: titleFont!,NSForegroundColorAttributeName: titleColor, NSParagraphStyleAttributeName: pstyle])
-        
+        NSView.setShadowFor(view: self)
         // Drawing code here.
     }
     

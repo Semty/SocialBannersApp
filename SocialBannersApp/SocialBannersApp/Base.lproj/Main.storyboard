@@ -786,7 +786,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <subviews>
                                                 <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" horizontalScrollElasticity="allowed" translatesAutoresizingMaskIntoConstraints="NO" id="BYj-wj-ODC" customClass="ImagesBannerScrollView" customModule="SocialBannersApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="633" width="357" height="70"/>
+                                                    <rect key="frame" x="0.0" y="645" width="357" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="ukr-Gm-Je8">
                                                         <rect key="frame" x="0.0" y="0.0" width="357" height="70"/>
@@ -817,7 +817,7 @@
                                                     </scroller>
                                                 </scrollView>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8IV-Up-Kqe">
-                                                    <rect key="frame" x="132" y="713" width="94" height="20"/>
+                                                    <rect key="frame" x="132" y="715" width="94" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Icon" id="Chg-2M-UCL">
                                                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
@@ -826,7 +826,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVJ-7C-Vaa">
-                                                    <rect key="frame" x="131" y="615" width="94" height="20"/>
+                                                    <rect key="frame" x="131" y="613" width="94" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Title" id="7KG-1h-TD9">
                                                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
@@ -835,7 +835,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kX1-4E-i0G">
-                                                    <rect key="frame" x="80" y="530" width="196" height="20"/>
+                                                    <rect key="frame" x="80" y="528" width="196" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Up to 20 characters" id="77g-Yy-XSm">
                                                         <font key="font" size="10" name="AvenirNext-UltraLight"/>
@@ -1036,15 +1036,15 @@
                                                     </subviews>
                                                 </customView>
                                                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EuU-p8-5iO" customClass="NewBannerView" customModule="SocialBannersApp" customModuleProvider="target">
-                                                    <rect key="frame" x="59" y="757" width="240" height="97"/>
+                                                    <rect key="frame" x="59" y="765" width="240" height="89"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <subviews>
                                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OgN-E0-LOz" customClass="BackgroundImageView" customModule="SocialBannersApp" customModuleProvider="target">
-                                                            <rect key="frame" x="20" y="33" width="32" height="32"/>
+                                                            <rect key="frame" x="20" y="25" width="32" height="32"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         </customView>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-d4-5rG" customClass="TitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
-                                                            <rect key="frame" x="52" y="34" width="192" height="22"/>
+                                                            <rect key="frame" x="52" y="26" width="192" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="O7m-gU-wMl">
                                                                 <font key="font" size="18" name="AvenirNext-Medium"/>
@@ -1053,9 +1053,9 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toy-uN-nWC" customClass="SubtitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
-                                                            <rect key="frame" x="52" y="7" width="192" height="22"/>
+                                                            <rect key="frame" x="52" y="-1" width="192" height="22"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="qCb-QG-bEs">
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" id="qCb-QG-bEs">
                                                                 <font key="font" size="16" name="AvenirNext-Medium"/>
                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1064,15 +1064,15 @@
                                                     </subviews>
                                                 </customView>
                                                 <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKq-g5-jdN" customClass="NewBannerView" customModule="SocialBannersApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="960" height="357"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <subviews>
                                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-vR-ka2" customClass="BackgroundImageView" customModule="SocialBannersApp" customModuleProvider="target">
-                                                            <rect key="frame" x="80" y="184" width="178" height="178"/>
+                                                            <rect key="frame" x="80" y="1" width="178" height="178"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         </customView>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIp-uI-Sq2" customClass="TitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
-                                                            <rect key="frame" x="258" y="189" width="702" height="111"/>
+                                                            <rect key="frame" x="258" y="6" width="702" height="111"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Final Title" id="QGw-Bc-1pU">
                                                                 <font key="font" metaFont="system"/>
@@ -1081,7 +1081,7 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcD-4F-N33" customClass="SubtitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
-                                                            <rect key="frame" x="258" y="39" width="702" height="111"/>
+                                                            <rect key="frame" x="258" y="-144" width="702" height="111"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Final Subtitle" id="1DM-QK-6gt">
                                                                 <font key="font" metaFont="system"/>

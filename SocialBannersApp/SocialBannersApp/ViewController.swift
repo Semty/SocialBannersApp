@@ -160,8 +160,11 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     
     fileprivate func configureCollectionView() {
         let flowLayout = NSCollectionViewFlowLayout()
-        flowLayout.itemSize = NSSize(width: 224.0, height: 126.0)
-        flowLayout.sectionInset = EdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        let widthForLayout = (self.view.bounds.width / 2) - self.view.bounds.width / 8
+        flowLayout.itemSize = NSSize(width: widthForLayout,
+                                     height: widthForLayout * 0.372)
+        flowLayout.sectionInset = EdgeInsets(top: 20, left: self.view.bounds.width / 16,
+                                             bottom: 20, right: self.view.bounds.width / 16)
         flowLayout.minimumInteritemSpacing = 15
         flowLayout.minimumLineSpacing = 40
         flowLayout.scrollDirection = .vertical

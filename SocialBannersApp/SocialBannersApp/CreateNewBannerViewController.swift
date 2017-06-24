@@ -69,6 +69,10 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.titleForNewBanner.stringValue = "Title"
+        self.enterTitleField.stringValue = "Title"
+        
         newBannerView.translatesAutoresizingMaskIntoConstraints = true
         roundedHeaderView.translatesAutoresizingMaskIntoConstraints = true
         
@@ -218,7 +222,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                 self.calculateFont(toFit: self.titleForNewBanner,
                                    withString: self.titleForNewBanner.stringValue as NSString,
                                    minSize: 1,
-                                   maxSize: 14)
+                                   maxSize: 15)
             }
         } else if enterTextField == enterSubtitleField {
             if enterTextField.stringValue.characters.count > 0 {
@@ -235,7 +239,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                     self.calculateFont(toFit: self.subtitleForNewBanner,
                                        withString: self.subtitleForNewBanner.stringValue as NSString,
                                        minSize: 1,
-                                       maxSize: 13)
+                                       maxSize: 10)
             }
         }
     
@@ -338,12 +342,12 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             self.calculateFont(toFit: self.titleForNewBanner,
                                withString: self.titleForNewBanner.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 14)
+                               maxSize: 15)
         self.subtitleForNewBanner.font =
             self.calculateFont(toFit: self.subtitleForNewBanner,
                                withString: self.subtitleForNewBanner.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 13)
+                               maxSize: 10)
         self.changeNBContentFontLabel.stringValue = font.type.rawValue
     }
     
@@ -389,12 +393,12 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             self.calculateFont(toFit: self.finalTitleLabel,
                                withString: self.finalTitleLabel.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 55)
+                               maxSize: 60)
         finalSubtitleLabel.font =
             self.calculateFont(toFit: self.finalSubtitleLabel,
                                withString: self.finalSubtitleLabel.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 50)
+                               maxSize: 40)
         finalTitleLabel.textColor = newBannerModel.contentColor
         finalSubtitleLabel.textColor = newBannerModel.contentColor
         

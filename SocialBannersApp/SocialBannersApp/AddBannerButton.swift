@@ -45,10 +45,13 @@ class AddBannerButton: NSButton {
         self.layer?.addSublayer(gradientLayer)
         
         // Creation Plus on the Button
+        
+        let width: CGFloat = 1.35
+        
         verLinePlusLayer.path =
-            CGPath(roundedRect: CGRect.init(x: self.bounds.size.width / 2 - 0.3,
+            CGPath(roundedRect: CGRect.init(x: self.bounds.size.width / 2 - width/2,
                                             y: self.bounds.size.height / 4,
-                                            width: 0.6,
+                                            width: width,
                                             height: self.bounds.size.height / 2),
                    cornerWidth: 0.2,
                    cornerHeight: 0.2,
@@ -56,9 +59,9 @@ class AddBannerButton: NSButton {
         
         horLinePlusLayer.path =
             CGPath(roundedRect: CGRect.init(x: self.bounds.size.height / 4,
-                                            y: self.bounds.size.width / 2 - 0.3,
+                                            y: self.bounds.size.width / 2 - width/2,
                                             width: self.bounds.size.height / 2,
-                                            height: 0.6),
+                                            height: width),
                    cornerWidth: 0.2,
                    cornerHeight: 0.2,
                    transform: nil)
