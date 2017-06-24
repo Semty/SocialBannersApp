@@ -702,7 +702,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MrR-9Q-Nwn">
-                                        <rect key="frame" x="345" y="10" width="125" height="25"/>
+                                        <rect key="frame" x="300" y="10" width="215" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="(Last 18)" id="WRa-le-3O7">
                                             <font key="font" size="14" name="AvenirNext-Medium"/>

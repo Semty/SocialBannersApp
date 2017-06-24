@@ -39,6 +39,8 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     override func viewWillAppear() {
         super.viewWillAppear()
         
+        lastBannersText()
+        
         self.window.backgroundColor = NSColor(calibratedRed: 0.96470588,
                                               green: 0.96470588,
                                               blue: 0.96470588,
@@ -146,6 +148,17 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
             bannersCollection.animator().alphaValue = alpha
             
         }, completionHandler: nil)
+    }
+    
+    func lastBannersText() {
+        let bannersModel = BannersDefaults.loadBanners(forKey: .banners)
+        
+        if bannersModel.count == 0 {
+            lastBannersLabel.stringValue = "You haven't made banner yet"
+        } else {
+            lastBannersLabel.stringValue = "You have \(bannersModel.count) preview(s)"
+        }
+        
     }
 
 // MARK: - Actions

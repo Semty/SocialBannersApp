@@ -425,6 +425,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         
         let bannersVC = self.presenting as! ViewController
         bannersVC.bannersCollection.reloadData()
+        bannersVC.lastBannersText()
         
         self.dismiss(nil)
         
