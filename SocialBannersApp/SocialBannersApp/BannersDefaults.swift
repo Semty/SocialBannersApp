@@ -42,8 +42,7 @@ class BannersDefaults {
             for data in inputData {
                 unarchivedBanners.append(NSKeyedUnarchiver.unarchiveObject(with: data) as! BannerModel)
             }
-            
-            
+
             return unarchivedBanners
         } else {
             return []

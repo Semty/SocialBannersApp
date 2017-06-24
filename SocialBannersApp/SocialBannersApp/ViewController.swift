@@ -14,6 +14,7 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     
     @IBOutlet weak var addBannerButton: AddBannerButton!
     @IBOutlet weak var myBannersLabel: NSTextField!
+    @IBOutlet weak var lastBannersLabel: NSTextField!
     
     @IBOutlet weak var bannersScrollView: NSScrollView!
     @IBOutlet weak var bannersCollection: NSCollectionView!
@@ -84,16 +85,13 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     public func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         for indexPath in indexPaths {
             
-// FIXME: - NEED ADD CODE HERE
-            
             let createBannerVC = self.storyboard?.instantiateController(withIdentifier: "CreateNewBannerViewController") as! CreateNewBannerViewController
             
             let bannersModel = BannersDefaults.loadBanners(forKey: .banners)
             createBannerVC.newBannerModel = bannersModel[indexPath.item]
             
-            self.presentViewControllerAsSheet(createBannerVC)
             resizeWindow(withCreateBannerSize: createBannerVC.view.bounds)
-            
+            self.presentViewControllerAsSheet(createBannerVC)
         }
     }
 
@@ -107,32 +105,44 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
     func resizeWindow(withCreateBannerSize createBannerSize: CGRect) {
         
         if windowStartedState {
-            
+            hideAllElements(isHidden: true)
             self.windowStartedSize = self.window.frame
             self.windowFinishedSize = CGRect(x: windowStartedSize.origin.x + (windowStartedSize.width - createBannerSize.width)/2,
                                              y: windowStartedSize.origin.y,
                                              width: createBannerSize.width,
                                              height: windowStartedSize.height)
-            addBannerButton.isHidden = true
-            myBannersLabel.isHidden = true
+            
             self.window.setFrame(windowFinishedSize,
                                        display: true,
                                        animate: true)
         } else {
-            
+            hideAllElements(isHidden: false)
             self.windowFinishedSize = (self.view.window?.frame)!
             self.windowStartedSize = CGRect(x: windowFinishedSize.origin.x - (windowStartedSize.width - createBannerSize.width)/2,
                                             y: windowFinishedSize.origin.y,
                                             width: windowStartedSize.width,
                                             height: windowStartedSize.height)
-            addBannerButton.isHidden = false
-            myBannersLabel.isHidden = false
+            
             self.view.window?.setFrame(windowStartedSize,
                                        display: true,
                                        animate: true)
             
         }
         windowStartedState = !windowStartedState
+    }
+    
+    func hideAllElements(isHidden: Bool) {
+        
+        let alpha: CGFloat = isHidden ? 0 : 1
+        
+        NSAnimationContext.runAnimationGroup({ (content) in
+            addBannerButton.alphaValue = alpha
+            myBannersLabel.alphaValue = alpha
+            lastBannersLabel.alphaValue = alpha
+            bannersCollection.alphaValue = alpha
+        }) {
+            self.bannersCollection.alphaValue = 1.0
+        }
     }
 
 // MARK: - Actions
@@ -141,8 +151,8 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
         
         let createBannerVC = self.storyboard?.instantiateController(withIdentifier: "CreateNewBannerViewController") as! CreateNewBannerViewController
         
-        self.presentViewControllerAsSheet(createBannerVC)
         resizeWindow(withCreateBannerSize: createBannerVC.view.bounds)
+        self.presentViewControllerAsSheet(createBannerVC)
     }
     
 // MARK: - Configure CollectionView
