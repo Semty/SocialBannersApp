@@ -433,15 +433,14 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         let savePanel = NSSavePanel()
         savePanel.canCreateDirectories = true
         savePanel.allowedFileTypes = ["png"]
-        savePanel.begin
-            { (result) -> Void in
-                if result == NSFileHandlingPanelOKButton
-                {
-                    let fileUrl = savePanel.url
-                    if let rightURL = fileUrl {
-                        self.saveFinalNewBanner(withURL: rightURL)
-                    }
+        savePanel.beginSheetModal(for: self.view.window!) { (result) in
+            if result == NSFileHandlingPanelOKButton
+            {
+                let fileUrl = savePanel.url
+                if let rightURL = fileUrl {
+                    self.saveFinalNewBanner(withURL: rightURL)
                 }
+            }
         }
     }
 }
