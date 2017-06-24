@@ -14,6 +14,8 @@ class CrtBnnrBgScrollView: NSScrollView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
+        self.scrollerStyle = .overlay
+        self.scrollerKnobStyle = .light
         // Drawing code here.
     }
 

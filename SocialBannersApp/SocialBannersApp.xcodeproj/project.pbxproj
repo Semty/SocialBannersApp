@@ -102,6 +102,11 @@
 		D56E460F1EDAC4AB0062349F /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		D56E46111EDB19210062349F /* AddBannerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBannerButton.swift; sourceTree = "<group>"; };
 		D56E46131EDC4E4C0062349F /* CreateNewBannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewBannerViewController.swift; sourceTree = "<group>"; };
+		D57E928D1EFEB66D00C126E7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		D57E928E1EFEBE6900C126E7 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		D57E928F1EFEC32800C126E7 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		D57E92901EFEC70600C126E7 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		D57E92911EFED07E00C126E7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		D58987CB1EFE989B00C8E029 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		D58987CC1EFE9D5000C8E029 /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		D58987CE1EFEA58E00C8E029 /* SocialBannersApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialBannersApp.entitlements; sourceTree = "<group>"; };
@@ -269,7 +274,6 @@
 		D58A11081EC879EA00B708F9 /* SocialBannersApp */ = {
 			isa = PBXGroup;
 			children = (
-				D58987CE1EFEA58E00C8E029 /* SocialBannersApp.entitlements */,
 				D58A11091EC879EA00B708F9 /* AppDelegate.swift */,
 				D500654C1EF6ED5F00FDEB35 /* Controllers */,
 				D5BA653F1EE1685500AD40A6 /* Custom Controls and Views */,
@@ -280,6 +284,7 @@
 				D58987CC1EFE9D5000C8E029 /* Translation.swift */,
 				D58A110D1EC879EB00B708F9 /* Assets.xcassets */,
 				D58A110F1EC879EB00B708F9 /* Main.storyboard */,
+				D58987CE1EFEA58E00C8E029 /* SocialBannersApp.entitlements */,
 				D58A11121EC879EB00B708F9 /* Info.plist */,
 			);
 			path = SocialBannersApp;
@@ -589,6 +594,11 @@
 			children = (
 				D58A11101EC879EB00B708F9 /* Base */,
 				D58987CB1EFE989B00C8E029 /* ru */,
+				D57E928D1EFEB66D00C126E7 /* de */,
+				D57E928E1EFEBE6900C126E7 /* fr */,
+				D57E928F1EFEC32800C126E7 /* it */,
+				D57E92901EFEC70600C126E7 /* ja */,
+				D57E92911EFED07E00C126E7 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

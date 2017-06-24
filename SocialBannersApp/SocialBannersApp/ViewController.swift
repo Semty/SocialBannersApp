@@ -167,6 +167,8 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
         flowLayout.scrollDirection = .vertical
         
         bannersCollection.collectionViewLayout = flowLayout
+        bannersCollection.enclosingScrollView?.scrollerStyle = .overlay
+        bannersCollection.enclosingScrollView?.scrollerKnobStyle = .light
         view.wantsLayer = true
     }
     
