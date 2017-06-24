@@ -23,8 +23,7 @@ class ImagesBannerScrollView: NSScrollView {
     
     override func scrollWheel(with event: NSEvent) {
         
-        
-        
+        self.autohidesScrollers = true
         var shouldForwardScroll = false
         
         if self.usesPredominantAxisScrolling {

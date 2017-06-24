@@ -37,10 +37,8 @@ class TitleView: NSView {
                                             secondColor: secondDradientColor,
                                             andFrame: self.bounds)
         
-        let endSublayersIndex = UInt32((self.layer?.sublayers?.endIndex)!) - 1
-        
         self.layer?.insertSublayer(gradientLayer,
-                                   at: endSublayersIndex)
+                                   at: 0)
         
         let shadow = NSShadow()
         shadow.shadowOffset = NSSize(width: 0, height: -2)
