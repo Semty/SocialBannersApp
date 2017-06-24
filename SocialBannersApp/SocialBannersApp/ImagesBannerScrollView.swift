@@ -13,11 +13,17 @@ class ImagesBannerScrollView: NSScrollView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-
+        
+        self.autohidesScrollers = true
+        self.scrollerStyle = .overlay
+        self.scrollerKnobStyle = .light
+        self.horizontalScrollElasticity = .allowed
         // Drawing code here.
     }
     
     override func scrollWheel(with event: NSEvent) {
+        
+        
         
         var shouldForwardScroll = false
         

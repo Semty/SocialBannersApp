@@ -21,6 +21,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBOutlet weak var roundedHeaderView: WhiteRoundedView!
     
     @IBOutlet weak var backToBannersButton: BackToBannersButton!
+    @IBOutlet weak var imageCollectionScrollView: ImagesBannerScrollView!
     @IBOutlet weak var imagesCollectionView: NSCollectionView!
     @IBOutlet weak var enterTitleField: NSTextField!
     @IBOutlet weak var enterSubtitleField: NSTextField!
@@ -80,6 +81,9 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         changeNBContentFontButton.draw(changeNBContentFontButton.frame)
         saveNewBannerButton.draw(saveNewBannerButton.frame)
         
+        imagesCollectionView.frame = imageCollectionScrollView.bounds
+        
+        
         self.topScrollPoint = CGPoint(x: 0,
                                       y: createBannerView.bounds.height - scrollView.bounds.height)
         self.view.wantsLayer = true
@@ -103,8 +107,8 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                                                      andColor: newBannerModel.contentColor)
         } else {
             imageForNewBannerView.isHidden = true
-            newBannerView.layout()
         }
+        newBannerView.layout()
     }
     
 // MARK: - View Will Appear
@@ -115,8 +119,11 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
         
         self.updateNBFont(withType: newBannerModel.fontType)
         self.updateNBContentColor(withContentColor: newBannerModel.contentColor)
+        
         self.titleForNewBanner.stringValue = newBannerModel.titleText
         self.subtitleForNewBanner.stringValue = newBannerModel.subtitleText
+        self.enterTitleField.stringValue = newBannerModel.titleText
+        self.enterSubtitleField.stringValue = newBannerModel.subtitleText
         
         self.bgColorLabel.stringValue = newBannerModel.bgColorName
         self.bgColorView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
@@ -188,6 +195,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     @IBAction func backToBannersAction(_ sender: NSButton) {
         
         let bannersVC = self.presenting as! ViewController
+        bannersVC.bannersCollection.deselectAll(nil)
         
         self.dismiss(sender)
         
@@ -307,12 +315,13 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     fileprivate func configureCollectionView() {
         let flowLayout = NSCollectionViewFlowLayout()
         flowLayout.itemSize = NSSize(width: 40.0, height: 40.0)
-        flowLayout.sectionInset = EdgeInsets(top: 0.0, left: 159.0, bottom: 20.0, right: 159.0)
-        flowLayout.minimumInteritemSpacing = 10.0
-        flowLayout.minimumLineSpacing = 20.0
+        flowLayout.sectionInset = EdgeInsets(top: 5.0, left: 159.0, bottom: 5.0, right: 159.0)
+        //flowLayout.minimumInteritemSpacing = 10.0
+        //flowLayout.minimumLineSpacing = 20.0
         flowLayout.scrollDirection = .horizontal
         
         imagesCollectionView.collectionViewLayout = flowLayout
+        (imagesCollectionView.superview?.superview as! ImagesBannerScrollView).draw(imagesCollectionView.bounds)
         view.wantsLayer = true
     }
     
@@ -329,12 +338,12 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
             self.calculateFont(toFit: self.titleForNewBanner,
                                withString: self.titleForNewBanner.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 15)
+                               maxSize: 14)
         self.subtitleForNewBanner.font =
             self.calculateFont(toFit: self.subtitleForNewBanner,
                                withString: self.subtitleForNewBanner.stringValue as NSString,
                                minSize: 1,
-                               maxSize: 15)
+                               maxSize: 13)
         self.changeNBContentFontLabel.stringValue = font.type.rawValue
     }
     

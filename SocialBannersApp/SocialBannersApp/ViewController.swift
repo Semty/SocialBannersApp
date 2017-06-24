@@ -136,14 +136,16 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
         
         let alpha: CGFloat = isHidden ? 0.0 : 1.0
         
-        NSAnimationContext.runAnimationGroup({ (content) in
-            addBannerButton.alphaValue = alpha
-            myBannersLabel.alphaValue = alpha
-            lastBannersLabel.alphaValue = alpha
-            bannersCollection.alphaValue = alpha
-        }) {
-            self.bannersCollection.alphaValue = 1.0
-        }
+        NSAnimationContext.runAnimationGroup({ (context) in
+            
+            context.duration = isHidden ? 0.3 : 1.0
+            
+            addBannerButton.animator().alphaValue = alpha
+            myBannersLabel.animator().alphaValue = alpha
+            lastBannersLabel.animator().alphaValue = alpha
+            bannersCollection.animator().alphaValue = alpha
+            
+        }, completionHandler: nil)
     }
 
 // MARK: - Actions

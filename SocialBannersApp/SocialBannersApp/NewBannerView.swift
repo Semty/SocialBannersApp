@@ -50,9 +50,9 @@ class NewBannerView: NSView {
         gradientLayer.colors = backgroundColors
         
         if gradientLayer.superlayer == nil {
-            self.layer?.addSublayer(gradientLayer)
             gradientLayer.cornerRadius = 6.0
             gradientLayer.frame = self.bounds
+            self.layer?.insertSublayer(gradientLayer, at: 0)
         }
     }
     
@@ -116,6 +116,7 @@ class NewBannerView: NSView {
     }
     
     func setAllElements() -> Bool {
+        
         if backgroundImageView == nil || titleTextField == nil || subtitleTextField == nil {
             for subview in self.subviews {
                 if subview is BackgroundImageView && backgroundImageView == nil {
@@ -128,7 +129,12 @@ class NewBannerView: NSView {
                     subtitleTextField = subview as? SubtitleTextField
                 }
             }
-            return false
+            
+            if backgroundImageView != nil || titleTextField != nil || subtitleTextField != nil {
+                return true
+            } else {
+                return false
+            }
         } else {
             return true
         }
