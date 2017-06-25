@@ -4,7 +4,7 @@ Developer: Ruslan Timchenko (https://github.com/Semty)
 
 Designer: Ivan Vorobei (https://github.com/IvanVorobei)
 
-<img src="http://telegra.ph/file/1150043b08816d6673e64.png" width="45%"></img> <img src="http://telegra.ph/file/d77ac0e5aad0c7a1c4e99.png" width="45%"></img> <img src="http://telegra.ph/file/22d3a676b893d02fa6dd7.png" width="45%"></img> <img src="http://telegra.ph/file/65adace0d33380b4e468f.png" width="45%"></img>
+<img src="http://telegra.ph/file/ab4589c3caa1a76e5cc7a.png" width="45%"></img> <img src="http://telegra.ph/file/845a6bfd37d1937cb2014.png" width="45%"></img> <img src="http://telegra.ph/file/9910270408620e6e924c3.png" width="45%"></img> <img src="http://telegra.ph/file/37ca9b02ef0f4f5dce225.png" width="45%"></img> 
 
 The application allows you to make posts on social platforms more visible and unique! 
 
