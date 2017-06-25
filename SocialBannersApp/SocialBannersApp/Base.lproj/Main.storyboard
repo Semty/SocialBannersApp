@@ -843,7 +843,7 @@
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psR-Sw-fVQ">
+                                                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psR-Sw-fVQ" customClass="TitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
                                                     <rect key="frame" x="57" y="562" width="244" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="Enter a Title" id="lno-fJ-6lV">
@@ -855,7 +855,7 @@
                                                         <outlet property="delegate" destination="Ukx-uW-xgV" id="KGm-YE-hvx"/>
                                                     </connections>
                                                 </textField>
-                                                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYw-lA-f6U">
+                                                <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYw-lA-f6U" customClass="SubtitleTextField" customModule="SocialBannersApp" customModuleProvider="target">
                                                     <rect key="frame" x="56" y="437" width="244" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="Enter a Subtitle" id="VxT-Gh-iYX">
@@ -1008,7 +1008,7 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJv-Cm-6Gg">
-                                                                    <rect key="frame" x="99" y="35" width="149" height="27"/>
+                                                                    <rect key="frame" x="104" y="35" width="149" height="27"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="New banner" id="d0t-qh-N5w">
                                                                         <font key="font" size="16" name="AvenirNext-Medium"/>
