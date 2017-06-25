@@ -239,7 +239,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
                     self.calculateFont(toFit: self.subtitleForNewBanner,
                                        withString: self.subtitleForNewBanner.stringValue as NSString,
                                        minSize: 1,
-                                       maxSize: 10)
+                                       maxSize: 11)
             }
         }
     

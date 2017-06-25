@@ -21,8 +21,9 @@ class AddBannerButton: NSButton {
         if gradientLayer.superlayer == nil {
             setBackgroundLayer()
             self.layer?.cornerRadius = dirtyRect.size.height / 2
+            self.gradientLayer.cornerRadius = dirtyRect.size.height / 2
         }
-        
+        NSView.setShadowFor(view: self)
         // Drawing code here.
     }
     
