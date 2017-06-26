@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SocialBannersApp
+
+  Created by Ruslan Timchenko on 26.06.2017.
+  Copyright © 2017 Ruslan Timchenko. All rights reserved.
+*/
+CFBundleName = "Социальные Баннеры";
+CFBundleDisplayName = "Социальные Баннеры";
+NSHumanReadableCopyright = " Copyright © 2017\nDeveloper: github.com/Semty.\nDesigner: github.com/IvanVorobei\n All rights reserved.";
