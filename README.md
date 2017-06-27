@@ -1,4 +1,4 @@
-# Social Banners: Design of Posts (macOS version)
+# Social Banners: Design of Posts (macOS)
 
 Developer: Ruslan Timchenko (https://github.com/Semty)
 
@@ -14,3 +14,5 @@ There is an easy way to draw attention to a publication on VK/Twitter or Faceboo
 With our application you will have a lot of colors available, along with a large custom field and a huge number of combinations of visual features. Such banner will definitely stand out! 
 
 Enhance the loyalty of your subscribers with the help of our application!
+
+App Store: https://itunes.apple.com/ru/app/social-banners-design-of-posts/id1252245526?l=en&mt=12.
