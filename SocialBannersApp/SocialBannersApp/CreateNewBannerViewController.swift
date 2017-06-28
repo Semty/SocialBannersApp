@@ -119,6 +119,7 @@ class CreateNewBannerViewController: NSViewController, NSCollectionViewDataSourc
     
     override func viewWillAppear() {
         super.viewWillAppear()
+        self.view.window?.styleMask.remove(.resizable)
         self.newBannerView.setBackgroundColor(withColors: newBannerModel.backgroundColor)
         
         self.updateNBFont(withType: newBannerModel.fontType)

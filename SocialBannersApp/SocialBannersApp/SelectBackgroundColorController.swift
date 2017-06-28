@@ -26,6 +26,11 @@ class SelectBackgroundColorController: NSViewController, NSCollectionViewDataSou
         // Do view setup here.
     }
     
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        self.view.window?.styleMask.remove(.resizable)
+    }
+    
 // MARK: - NSCollectionViewDataSource
     
     public func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {

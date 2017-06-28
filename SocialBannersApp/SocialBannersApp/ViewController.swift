@@ -174,7 +174,6 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
         bannersCollection.enclosingScrollView?.scrollerKnobStyle = .light
         view.wantsLayer = true
     }
-    
 }
 
 
